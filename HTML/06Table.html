@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<!--행병합 rowspan-->
+<table border="1" width="400px" height="300px">
+    <tr>
+        <td rowspan="2">1</td>
+        <td>2</td>
+        <td>3</td>
+        <td rowspan="3">4</td>
+    </tr>
+    <tr>
+        <!--<td>5</td>-->
+        <td rowspan="2">6</td>
+        <td>7</td>
+        <!--<td>8</td>-->
+    </tr>
+    <tr>
+        <td>9</td>
+        <!--<td>10</td>-->
+        <td>11</td>
+        <!--<td>12</td>-->
+    </tr>
+</table>
+
+<hr>
+<!--열병합 colspan-->
+<table border="1" width="400px" height="300px">
+    <tr>
+        <td colspan="2">1</td>
+<!--        <td>2</td>-->
+        <td>3</td>
+        <td>4</td>
+    </tr>
+    <tr>
+        <td>5</td>
+        <td>6</td>
+        <td colspan="2">7</td>
+<!--        <td>8</td>-->
+    </tr>
+    <tr>
+        <td colspan="3">9</td>
+<!--        <td>10</td>-->
+<!--        <td>11</td>-->
+        <td>12</td>
+    </tr>
+</table>
+
+<hr>
+<table border="1" width="400px">
+    <tr align="center">
+        <td width="100px">이름</td>
+        <td width="100px"></td>
+        <td width="100px">연락처</td>
+        <td width="100px"></td>
+    </tr>
+    <tr align="center">
+        <td>주소</td>
+        <td colspan="3"></td>
+    </tr>
+    <tr align="center">
+        <td>자기소개</td>
+        <td colspan="3"></td>
+    </tr>
+</table>
+
+<hr>
+<table border="1" width="450px" height="250px">
+    <tr>
+        <th rowspan="3">JSP01 커리큘럼</th>
+        <td>1.HTML/CSS/JAVASCRIPT</td>
+        <td rowspan="6">비고</td>
+    </tr>
+    <tr>
+        <td>2.JSP 기초문법</td>
+    </tr>
+    <tr>
+        <td>3.지시자와 태그</td>
+    </tr>
+    <tr>
+        <th rowspan="3">JSP02 커리큘럼</th>
+        <td>4.파일업로드 사이트</td>
+    </tr>
+    <tr>
+        <td>5.회원가입 사이트</td>
+    </tr>
+    <tr>
+        <td>6.게시판 사이트</td>
+    </tr>
+</table>
+
+<hr>
+<table border="1">
+    <caption>수업 시간표2 (셀 합치기)</caption>
+    <tr>
+        <td>시간</td>
+        <td colspan="2">월요일</td>
+        <td>화요일</td>
+        <td>수요일</td>
+        <td>목요일</td>
+    </tr>
+    <tr>
+        <td>1교시</td>
+        <td colspan="2"></td>
+        <td></td>
+        <td></td>
+        <td rowspan="3">웹응용</td>
+    </tr>
+    <tr>
+        <td>2교시</td>
+        <td rowspan="2" colspan="2">웹 프로그래밍</td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>3교시</td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>4교시</td>
+        <td colspan="2"></td>
+        <td colspan="2">자바 스크립트</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>5교시</td>
+        <td colspan="2"></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+</table>
+</body>
+</html>
