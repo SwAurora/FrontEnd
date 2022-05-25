@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<!--폼태그 : Server로 client 정보 전달위해 사용-->
+<!--action : 서버수신페이지-->
+<!--method : 서버로 전달방식-->
+<!--(get : URL 실어서, post : request body에 실어서 전달)-->
+<form action="memberjoin.jsp" method="get">
+    <labeL>이름</labeL> : <input type="text" name="name"><br>
+    <labeL>나이</labeL> : <input type="text" name="age"><br>
+    <labeL>주소</labeL> : <input type="text" name="addr"><br>
+    <labeL>성별</labeL> : <input type="text" name="gender"><br>
+    <input type="submit" value="전송">
+</form>
+</body>
+</html>

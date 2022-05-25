@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<form action="join.jsp">
+    ID : <input type="text" name="userid"><br>
+    PW : <input type="password" name = "pwd"><br>
+    EMAIL : <input type="email"><br>
+    GENDER : <input type="radio" name="gender" value="M" checked>남&nbsp;
+             <input type="radio" name="gender" value="W">여<br>
+    Hobby :
+    <input type="checkbox" name="hobby1" value="reading">독서&nbsp;
+    <input type="checkbox" name="hobby2" value="climbing">등산&nbsp;
+    <input type="checkbox" name="hobby3" value="golf">골프&nbsp;
+    <input type="checkbox" name="hobby4" value="swimming">수영&nbsp;<br>
+    MEMO : <br>
+    <textarea rows ="10" cols="50" name="memo"></textarea>
+    <br>
+    TEL : <br>
+    <select name="tel1">
+        <option value="053">053</option>
+        <option value="055">055</option>
+        <option value="02" selected>02</option>
+    </select>
+    -<input type="text" name="tel2" style="width:30px">
+    -<input type="text" name="tel3" style="width:30px">
+    <br>
+    <input type="submit" value="가입하기">
+</form>
+</body>
+</html>

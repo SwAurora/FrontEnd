@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            font-family: 나눔고딕, serif;
+        }
+    </style>
+</head>
+<body>
+<h2>회원정보</h2>
+<hr width="60%" align="left">
+<hr width="60%" align="left">
+<form action="" method="post" enctype="multipart/form-data">
+    <fieldset style="width: 60%">
+        <legend>인적사항</legend>
+        이름 : <input type="text">
+        주민번호 : <input type="text">&nbsp;-&nbsp;<input type="text"><br>
+        국적 : <select>
+        <option value="내국인(대한민국)" selected>내국인(대한민국)</option>
+    </select><br>
+        취득자격증 : <select>
+        <option value="정보처리기사">정보처리기사</option>
+    </select>
+    </fieldset>
+    <fieldset style="width: 60%">
+        <legend>성별 & 학년</legend>
+        성별 : <input type="radio" name="gender">남성 <input type="radio" name="gender">여성<br>
+        학년 : <input type="radio" name="grade">1학년 <input type="radio" name="grade">2학년 <input type="radio" name="grade">3학년
+        <input type="radio" name="grade">4학년<br>
+    </fieldset>
+    <fieldset style="width: 60%">
+        <legend>취미</legend>
+        <input type="checkbox">독서
+        <input type="checkbox">바둑
+        <input type="checkbox">골프
+        <input type="checkbox">등산
+        <input type="checkbox">여행
+        <input type="checkbox">기타
+    </fieldset>
+    <fieldset style="width: 60%">
+        <legend>메모사항</legend>
+        <textarea style="width: 800px; height: 200px" placeholder="메모글을 남겨주세요."></textarea>
+    </fieldset>
+    <br>
+    첨부서류 : <input type="file" name="upload"><br>
+    <hr width="60%" align="left">
+    <input type="submit" value="저장하기">
+    <input type="reset" value="다시 입력하기">
+</form>
+</body>
+</html>

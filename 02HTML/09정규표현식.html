@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<form action="test.jsp" method="get">
+    숫자만 : <input type="text" name="test1" pattern="[0-9]*"> <br>
+    첫문자는 무조건 문자 : <input type="text" name="test2" pattern="^[a-z,A-Z]{1}[0-9]*"> <br>
+    주소 : <input type="text" name="test3" pattern="[a-z,A-Z,ㄱ-ㅎ,가-힣,\s]*"> <br>
+    패스워드 정책 : <input type="text" name="test4"
+                     pattern="^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*[!@#$%^&*()_-+=[]{}~?:;`|/]).{8,1}$"
+> <br>
+    <input type="submit" value="전송">
+</form>
+</body>
+</html>
+<!--
+     패스워드 길이 : 8-16
+     숫자,영문소문자,영문대문자,특수문자 중에 3개
+ -->

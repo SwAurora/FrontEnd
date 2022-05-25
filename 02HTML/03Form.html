@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!--BS Css-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!--BS JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"></script>
+    <style>
+        td{
+            padding-bottom: 20px;
+            padding-left:20px;
+        }
+        h1{
+            padding-top:5px;
+            padding-left:20px;
+        }
+
+    </style>
+</head>
+<body>
+<h1>회원가입</h1>
+<hr style="width: 50%">
+<form action="join.jsp">
+    <table>
+        <tr>
+            <td width="50px">ID</td>
+            <td><input type="text" name="userid" class="form-control" placeholder="아이디를 입력하세요"></td>
+        </tr>
+        <tr>
+            <td>PW</td>
+            <td><input type="password" name="pwd" class="form-control" placeholder="패스워드를 입력하세요"></td>
+        </tr>
+        <tr>
+            <td>EMAIL</td>
+            <td><input type="email" class="form-control" placeholder="example@example.com"></td>
+        </tr>
+        <tr>
+            <td>GENDER</td>
+            <td><input type="radio" name="gender" value="M" checked class="form-check-input">남&nbsp;<input type="radio"
+                                                                                                           name="gender"
+                                                                                                           value="W"
+                                                                                                           class="form-check-input">
+                여<br>
+            </td>
+        </tr>
+        <tr>
+            <td>Hobby</td>
+            <td><input type="checkbox" name="hobby1" value="reading" class="form-check-input">독서&nbsp;
+                <input type="checkbox" name="hobby2" value="climbing" class="form-check-input">등산&nbsp;
+                <input type="checkbox" name="hobby3" value="golf" class="form-check-input">골프&nbsp;
+                <input type="checkbox" name="hobby4" value="swimming" class="form-check-input">수영
+            </td>
+        </tr>
+        <tr>
+            <td>MEMO</td>
+            <td><textarea rows="10" cols="50" name="memo" class="form-control"></textarea>
+            </td>
+        </tr>
+        <tr>
+            <td>TEL</td>
+            <td style="display:flex"><select name="tel1" class="form-select w-25">
+                <option value="053">053</option>
+                <option value="055">055</option>
+                <option value="02" selected>02</option>
+            </select>
+                &nbsp;-&nbsp;<input type="text" name="tel2" style="width:30px" class="form-control w-25">
+                &nbsp;-&nbsp;<input type="text" name="tel3" style="width:30px" class="form-control w-25"></td>
+        </tr>
+        <tr>
+            <td><input type="submit" value="가입하기" class="btn btn-primary"></td>
+            <td>
+                <button type="reset" class="btn btn-dark">취소하기</button>
+            </td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>
