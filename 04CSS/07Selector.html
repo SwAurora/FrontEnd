@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 3px;
+    }
+
+    .c1 {
+        border: 1px solid black;
+    }
+
+    .c2 {
+        border: 1px solid red;
+    }
+
+    .c3 {
+        border: 1px solid green;
+    }
+
+    /*동위선택자 ~ , + */
+
+    .c2 p {
+        color: red;
+    }
+
+    /* ~ : 같은 레벨에 있는 하위 모든 선택자*/
+    /* + : 같은 레벨에 있는 바로 밑 선택자*/
+    .c2 ~ p {
+        color: blueviolet;
+    }
+
+    .c2 + p {
+        background-color: green;
+    }
+
+    .c3 ~ p {
+        color: blueviolet;
+    }
+
+    .c3 + p {
+        background-color: orange;
+    }
+</style>
+<body>
+<h1>제목</h1>
+<p>제목 아래있는 문장입니다.</p>
+<div class="c1">
+    <p>첫번째 div태그 내에 있는 문장1</p>
+    <div class="c2">
+        <p>두번째 div태그 내에 있는 문장1</p>
+        <div class="c3">
+            <p>세번째 div 내에 있는 문장1</p>
+            <p>세번째 div 내에 있는 문장2</p>
+            <p>세번째 div 내에 있는 문장3</p>
+        </div>
+        <p>두번째 div태그 내에 있는 문장2</p>
+        <p>두번째 div태그 내에 있는 문장3</p>
+    </div>
+    <p>첫번째 div태그 내에 있는 문장2</p>
+    <p>첫번째 div태그 내에 있는 문장3</p>
+</div>
+</body>
+</html>

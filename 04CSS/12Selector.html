@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        border: 1px solid gray;
+        margin: 5px;
+    }
+
+    .c1 p:first-child {
+        background-color: orange;
+    }
+
+    .c1 p:last-child {
+        background-color: green;
+    }
+    /*c1안의 모든 p 태그중에 홀수 태그만*/
+    .c1 p:nth-child(2n-1) {
+        background-color: yellow;
+    }
+</style>
+<body>
+<h1>제목</h1>
+<p>제목 아래있는 문장입니다.</p>
+<div class="c1" style="border:5px solid blue;">
+    <p>첫번째 div태그 내에 있는 문장1</p>
+    <div class="c2" style="border:7px solid red;">
+        <p>두번째 div태그 내에 있는 문장1</p>
+        <div class="c3" style="border: 9px solid green;">
+            <p>세번째 div 내에 있는 문장1</p>
+            <p>세번째 div 내에 있는 문장2</p>
+            <p>세번째 div 내에 있는 문장3</p>
+        </div>
+        <p>두번째 div태그 내에 있는 문장2</p>
+        <p>두번째 div태그 내에 있는 문장3</p>
+    </div>
+    <p>첫번째 div태그 내에 있는 문장2</p>
+    <p>첫번째 div태그 내에 있는 문장3</p>
+</div>
+</body>
+</html>

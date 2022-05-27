@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!--전체 선택자, HTML요소선택자, ID선택자, 클래스선택자, 그룹선택자-->
+    <style>
+        * {
+            font-family: 'Noto Sans KR', sans-serif;
+            border: 1px solid gray;
+        }
+
+        /*html 요소 선택자*/
+        h1 {
+            background-color: antiquewhite;
+        }
+
+        /*id선택자*/
+        #test1 {
+            background-color: azure;
+        }
+
+        /*클래스선택자*/
+        .item {
+            background-color: aquamarine;
+        }
+
+        /*그룹선택자*/
+        h1, #test1, .item {
+            margin:5px 20px;
+        }
+    </style>
+</head>
+<body>
+<h1>HelloWorld</h1>
+<h2 id="test1">HelloWorld</h2>
+<h3 class="item">HelloWorld</h3>
+<h4 class="item">HelloWorld</h4>
+<h5 class="item">HelloWorld</h5>
+</body>
+</html>

@@ -12,8 +12,8 @@
         }
 
         body {
-            width:50%;
-            margin:0 auto;
+            width: 60%;
+            margin: 50px auto;
         }
 
         table {
@@ -23,6 +23,7 @@
             border-bottom: 1px solid gray;
             border-collapse: collapse;
             margin-bottom: 12px;
+            font-size: 14px;
         }
 
         td {
@@ -30,9 +31,8 @@
         }
 
         td:nth-child(2n-1) {
-            background-color: lightgray;
-            width: 250px;
-            font-weight: 800;
+            width: 150px;
+            font-weight: 200;
         }
 
         /*::after 가상선택자*/
@@ -54,8 +54,13 @@
             cursor: pointer;
         }
 
+        button:active {
+            background-color: black;
+        }
+
         #title {
             font-size: 32px;
+            font-weight: bold;
         }
 
         #comment1 {
@@ -63,12 +68,17 @@
         }
 
         #comment1 span {
-            color: darkslateblue;
+            color: dodgerblue;
         }
 
         #comment2 {
             font-size: 14px;
             color: gray;
+        }
+
+        input:focus {
+            border: 0;
+            outline: 2px dashed blueviolet;
         }
     </style>
 </head>
@@ -84,25 +94,74 @@
 <table>
     <tr>
         <td>웹아이디</td>
-        <td colspan="3">2</td>
+        <td colspan="3"><input type="text"></td>
     </tr>
     <tr>
         <td>생년월일</td>
-        <td>5</td>
+        <td><select>
+            <script>
+                for (i = 1900; i <= 2022; i++)
+                {
+                    if (i === 1980)
+                    {
+                        document.write("<option selected>" + i + "</option>");
+                    }
+                    else
+                    {
+                        document.write("<option>" + i + "</option>");
+                    }
+                }
+            </script>
+        </select>
+            <select>
+                <script>
+                    for (i = 1; i <= 12; i++)
+                    {
+                        if (i <= 9)
+                        {
+                            document.write("<option>" + 0 + i + "</option>");
+                        }
+                        else
+                        {
+                            document.write("<option>" + i + "</option>");
+                        }
+                    }
+                </script>
+            </select>
+            <select>
+                <script>
+                    for (i = 1; i <= 31; i++)
+                    {
+                        if (i <= 9)
+                        {
+                            document.write("<option>" + 0 + i + "</option>");
+                        }
+                        else
+                        {
+                            document.write("<option>" + i + "</option>");
+                        }
+                    }
+                </script>
+            </select></td>
         <td>성별</td>
-        <td>6</td>
+        <td><input type="radio" name="gender">남<input type="radio" name="gender">여</td>
     </tr>
     <tr>
         <td>전송방법</td>
-        <td colspan="3">8</td>
+        <td colspan="3"><input type="radio" name="transfer">가입 시 이메일<input type="radio" name="transfer">가입 시 휴대전화</td>
     </tr>
     <tr>
         <td>가입 시 이메일</td>
-        <td colspan="3">11</td>
+        <td colspan="3"><input type="text" disabled>@<input type="text" disabled><select disabled>
+            <option>직접입력</option>
+        </select></td>
     </tr>
     <tr>
         <td>가입 시 휴대전화</td>
-        <td colspan="3">14</td>
+        <td colspan="3"><select disabled>
+            <option>010</option>
+        </select>&nbsp;-&nbsp;<input type="text" disabled>&nbsp;-&nbsp;<input type="text"
+                                                                              disabled></td>
     </tr>
 </table>
 <fieldset style="display: flex">

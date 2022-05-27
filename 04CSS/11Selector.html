@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input[type='text'] {
+            border: 0px;
+            outline: 2px dashed orange;
+            margin: 15px;
+            display: inline-block;
+            height: 30px;
+        }
+
+        input[type='text']:disabled {
+            background-color: bisque;
+            outline: 1px solid red;
+        }
+
+        /* 체크를 했을때 없애기 */
+
+        /* input[type='checkbox']:checked + input[type='text']{
+          visibility:hidden;
+        } */
+
+        /* 체크를 했을때 보여주기-1*/
+        /* input[type='text']{
+            visibility: hidden;
+        }
+        input[type='checkbox']:checked + input[type='text']{
+          visibility:visible;
+        } */
+
+        /* 체크를 했을때 보여주기-2*/
+
+        /* input:not([type='checkbox']:checked) + input[type='text']{
+          visibility:hidden;
+        } */
+
+
+    </style>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+</head>
+<body>
+<input id=c1 type="checkbox">
+<input type="text"><br>
+
+<input type="checkbox">
+<input type="text" disabled><br>
+
+<input type="checkbox">
+<input type="text"><br>
+
+<input type="checkbox">
+<input type="text" disabled><br>
+
+<script>
+
+    var chkbox = document.querySelectorAll("input[type=checkbox]");
+
+    chkbox[0].addEventListener('change', function ()
+    {
+        if (this.checked)
+        {
+
+            tmp = document.querySelectorAll('input[type=checkbox] + input');
+            tmp[0].disabled = true;
+
+        }
+        else
+        {
+            tmp[0].disabled = false;
+        }
+    })
+    chkbox[1].addEventListener('change', function ()
+    {
+        if (this.checked)
+        {
+
+            tmp = document.querySelectorAll('input[type=checkbox] + input');
+            tmp[1].disabled = true;
+
+        }
+        else
+        {
+            tmp[1].disabled = false;
+        }
+    })
+    chkbox[2].addEventListener('change', function ()
+    {
+        if (this.checked)
+        {
+
+            tmp = document.querySelectorAll('input[type=checkbox] + input');
+            tmp[2].disabled = true;
+
+        }
+        else
+        {
+            tmp[2].disabled = false;
+        }
+    })
+    chkbox[3].addEventListener('change', function ()
+    {
+        if (this.checked)
+        {
+
+            tmp = document.querySelectorAll('input[type=checkbox] + input');
+            tmp[3].disabled = true;
+
+        }
+        else
+        {
+            tmp[3].disabled = false;
+        }
+    })
+</script>
+
+</body>
+</html>

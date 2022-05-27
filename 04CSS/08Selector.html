@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        a {
+            display: block;
+            width: 80px;
+            height: 30px;
+            background-color: tomato;
+            color: white;
+            /* text-decoration: none; */
+            text-align: center;
+            line-height: 30px;
+            margin: 10px;
+        }
+
+        /* 의사선택자  */
+        a:hover {
+            background-color: blue;
+        }
+
+        a:visited {
+            color: black;
+        }
+
+        a:active {
+            color: yellow;
+        }
+
+        #txt {
+            border: 1px dashed lightgray;
+        }
+
+        #txt:focus {
+            border: 0px;
+            outline: 3px dashed orange;
+
+        }
+
+        /* 사용자가 한번도 링크페이지를 방문하지 않은상태(기본) */
+        button:link {
+            background-color: blueviolet;
+        }
+
+        button {
+            background-color: aquamarine;
+        }
+
+        input:checked + span {
+            color: yellow;
+            background-color: green;
+        }
+
+        input[type="checkbox"] {
+            outline: 3px solid yellow;
+            border: 0px;
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+<a href="#" id="d">TEST1</a>
+<a href="#" id="d">TEST2</a>
+<input id=txt type="text"><br>
+<button>TEST</button>
+<br>
+
+<div id="chk">
+    <input type="checkbox"> <span>체크박스</span>
+</div>
+</body>
+</html>

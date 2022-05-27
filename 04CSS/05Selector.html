@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            border: 1px solid gray;
+            margin: 5px;
+        }
+
+        /*자식선택자*/
+        .c1 > p {
+            border: 2px solid orange;
+        }
+
+        /*자손선택자*/
+        .c1 p {
+            background-color: aquamarine;
+        }
+    </style>
+</head>
+<body>
+<!--p 태그안에는 블럭형태그(div)를 넣을 수 없음-->
+<h1>제목</h1>
+<p>제목 아래있는 문장입니다.</p>
+<div class="c1">
+    <div>
+        <p>두번째 div태그 내에 있는 문장1 입니다</p>
+        <div>
+            <p>세번째 div안의 문장1 입니다</p>
+            <a href="#">세번째 div태그 a태그</a>
+        </div>
+    </div>
+    <p>첫번째 div태그 내에 있는 문장2입니다</p>
+    <a href="#">첫번째 div태그 a태그</a>
+    <p>첫번째 div태그 내에 있는 문장3입니다</p>
+</div>
+</body>
+</html>
