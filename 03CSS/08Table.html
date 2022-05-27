@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<style>
+    table {
+        border: 1px solid gray;
+        width: 300px;
+        height: 300px;
+        margin: 100px auto;
+        border-collapse: collapse;
+        text-align: center;
+    }
+
+    td {
+        border: 1px solid gray;
+    }
+
+    /*thead {background-color:lightgray;}*/
+    /*tbody {background-color: beige;}*/
+    /*tfoot {background-color: darkgray;}*/
+
+    /*tr:nth-child(2n)*/
+    /*
+        2n(even)  : 짝수행
+        2n-1(odd) : 홀수행
+        3n        : 3배수행
+    */
+    tbody tr:nth-child(2n-1) {
+        background-color: bisque;
+    }
+</style>
+<table>
+    <thead>
+    <tr>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>4</td>
+        <td>5</td>
+        <td>6</td>
+    </tr>
+    <tr>
+        <td>7</td>
+        <td>8</td>
+        <td>9</td>
+    </tr>
+    <tr>
+        <td>10</td>
+        <td>11</td>
+        <td>12</td>
+    </tr>
+    <tr>
+        <td>13</td>
+        <td>14</td>
+        <td>15</td>
+    </tr>
+    </tbody>
+    <tfoot>
+    <tr>
+        <td>16</td>
+        <td>17</td>
+        <td>18</td>
+    </tr>
+    </tfoot>
+</table>
+<!--
+    thead : 테이블의 최상단 배치
+    tbody : thead, tfoot 사이 배치
+    tfoot : 테이블의 최하단 배치
+-->
+</body>
+</html>

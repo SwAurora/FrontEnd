@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            /*하위 태그요소를 inline-block화 시킨다*/
+            display: flex;
+            /*여러행으로 나누어서 표시*/
+            flex-wrap: wrap;
+        }
+
+        div {
+            width: 300px;
+            height: 300px;
+            border: 2px solid gray;
+            padding: 20px;
+            /*top,right,bottom,left 각각 15px*/
+            /*margin:15px;*/
+
+            /*top,bottom:30px left,right=100px*/
+            /*margin: 30px 100px;*/
+
+            /*top:10 right:20 bottom:30 left:20*/
+            /*margin:10px 20px 30px;*/
+
+            /*top:10 right:20 bottom:30 left:40*/
+            /*margin:10px 20px 30px 40px;*/
+
+            /*margin-top:15px;*/
+            /*margin-right: 30px;*/
+            /*margin-left: 30px;*/
+            /*margin-bottom:50px;*/
+        }
+    </style>
+</head>
+<body>
+<!--
+    html 태그는 요소마다 특정한 영역으로 나눠진다
+    contents 영역 : 내용물
+    padding 영역 : 내용물과 border 사이
+    border 영역 : 테두리
+    margin 영역 : 다른 요소와의 거리
+-->
+<div>TEST</div>
+<div>TEST</div>
+<div>TEST</div>
+<div>TEST</div>
+<div>TEST</div>
+<div>TEST</div>
+<div>TEST</div>
+<div>TEST</div>
+<div>TEST</div>
+<div>TEST</div>
+<div>TEST</div>
+<div>TEST</div>
+<div>TEST</div>
+<div>TEST</div>
+</body>
+</html>
