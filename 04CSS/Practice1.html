@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            font-family: 'Noto Sans KR', sans-serif;
+        }
+
+        table {
+            width: 50%;
+            margin: auto;
+            border: none;
+            border-collapse: collapse;
+        }
+
+        #tr1 {
+            background-color: black;
+            color: white;
+            font-size: 32px;
+        }
+
+        td {
+            border-bottom: 2px solid gray;
+        }
+
+        span {
+            font-size: 0.7em;
+            color: gray;
+        }
+
+        button {
+            width: 215px;
+            height: 48px;
+            font-weight: bold;
+        }
+
+        #b1 {
+            background-color: #E63740;
+            color: #ffffff;
+            border: 0;
+        }
+
+        #b2 {
+            background-color: #ffffff;
+            border: 1px solid #d6d6d6;
+        }
+
+        input[type='text']:focus,[type='password']:focus {
+            border: 0;
+            outline: 3px solid blueviolet;
+        }
+
+        .ftd {
+            font-size: 32px;
+            width: 30%;
+            vertical-align: top;
+        }
+
+        .input1 {
+            width: 427px;
+            height: 30px;
+            margin-bottom: 12px;
+        }
+
+        .select {
+            width: 132px;
+            height: 30px;
+            margin-bottom: 12px;
+        }
+    </style>
+</head>
+<body>
+<table>
+    <tr id="tr1">
+        <td colspan="2"><img src="https://pics.auction.co.kr/join/h2_tit_join.png" alt="옥션 회원가입"></td>
+    </tr>
+    <tr>
+        <td class="ftd">
+            <div style="margin-top:15px;"></div>
+            1 정보입력
+        </td>
+        <td>
+            <div style="margin-top:15px;"></div>
+            <input type="text" placeholder="이름" class="input1"><br>
+            <input type="text" placeholder="아이디" class="input1"><br>
+            <input type="password" placeholder="비밀번호" class="input1"><br>
+            <input type="password" placeholder="비밀번호 재입력" class="input1"><br>
+            <select class="select">
+                <option selected>휴대폰 번호 선택</option>
+                <option>010</option>
+                <option>011</option>
+                <option>016</option>
+            </select>
+            &nbsp;-&nbsp;<input type="text" class="select">
+            &nbsp;-&nbsp;<input type="text" class="select">
+            <br>
+            <input type="text" placeholder="이메일" class="select">
+            @
+            <select class="select">
+                <option selected>선택</option>
+                <option>naver.com</option>
+                <option>hanmail.com</option>
+                <option>daum.net</option>
+                <option>nate.com</option>
+                <option>gmail.com</option>
+                <option>hotmail.com</option>
+            </select>
+        </td>
+    </tr>
+    <tr>
+        <td class="ftd">
+            <div style="margin-top:15px;"></div>
+            2 약관동의
+        </td>
+        <td>
+            <div style="margin-top:15px;"></div>
+            <input type="checkbox">전체 동의
+            <hr width="400px" align="left">
+            <input type="checkbox">옥션 이용약관<span>(필수)</span><br>
+            <input type="checkbox">전자금융거래 이용약관<span>(필수)</span><br>
+            <input type="checkbox">개인정보 수집 및 이용<span>(필수)</span><br>
+            <input type="checkbox">개인정보 제3자(판매자) 제공<span>(선택)</span><br>
+            <input type="checkbox">개인정보 수집 및 이용<span>(선택)</span><br>
+            <input type="checkbox">위치정보 이용약관<span>(선택)</span><br>
+            <input type="checkbox">혜택 알림 이메일, 문자, 앱 푸시 수신<span>(선택)</span><br>
+            <div style="margin-top:15px;"></div>
+        </td>
+    </tr>
+    <tr>
+        <td style="border-bottom: 0">
+            <div style="margin-top:15px;"></div>
+        </td>
+        <td style="border-bottom: 0">
+            <div style="margin-top:15px;"></div>
+            <ul style="padding-left: 20px; color:#999;">
+                <li>가입은 14세 이상 고객만 가능합니다.</li>
+                <li>7세 이상 14세 미만 회원은 회원가입 후 모바일에서 본인인증, 법정대리인 인증을 선택하면 서비스를 이용하실 수 있습니다.</li>
+                <li>고객은 동의를 거부할 권리가 있으며 동의를 거부할 경우, 사이트 가입 또는 일부 서비스 이용이 제한됩니다.</li>
+            </ul>
+            <div style="margin-top:15px;"></div>
+            <button id="b1">회원가입</button>
+            <button id="b2">취소</button>
+        </td>
+    </tr>
+</table>
+</body>
+</html>
