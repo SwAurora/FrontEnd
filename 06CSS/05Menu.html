@@ -14,12 +14,14 @@
             integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
             crossorigin="anonymous"></script>
     <style>
-        body {
+        body
+        {
             margin: 0;
             background-color: chocolate;
         }
 
-        #topmenu {
+        #topmenu
+        {
             display: flex;
             align-items: center;
             text-align: center;
@@ -31,16 +33,19 @@
             background-color: white;
         }
 
-        #logo {
+        #logo
+        {
             width: 10%;
         }
 
-        ul {
+        ul
+        {
             list-style: none;
             padding: 0;
         }
 
-        #depth1 {
+        #depth1
+        {
             width: 50%;
             display: flex;
             justify-content: space-between;
@@ -50,46 +55,55 @@
             top: 40%;
         }
 
-        #depth1 > li {
+        #depth1 > li
+        {
             width: 150px;
         }
 
-        #quick {
+        #quick
+        {
             width: 90%;
             text-align: right;
         }
 
-        .depth2 {
+        .depth2
+        {
             display: none;
         }
 
-        #depth1:hover .depth2 {
+        #depth1:hover .depth2
+        {
             display: block;
             position: relative;
             left: 0;
             top: 10%;
         }
 
-        .depth2 > li {
+        .depth2 > li
+        {
             margin: 10px auto;
         }
 
-        #depth1 > li:hover a {
+        #depth1 > li:hover a
+        {
             border-bottom: 3px solid orange;
         }
 
-        #topmenu:hover {
+        #topmenu:hover
+        {
             border-bottom: 1px solid lightgray;
         }
 
-        #depth1 a {
+        #depth1 a
+        {
             display: block;
             text-decoration: none;
             color: black;
             height: 56px;
         }
 
-        #modal {
+        #modal
+        {
             display: none;
             background-color: white;
             width: 100%;
@@ -100,7 +114,8 @@
             z-index: -1;
         }
 
-        #topmenu:hover #modal {
+        #topmenu:hover #modal
+        {
             display: block;
         }
     </style>

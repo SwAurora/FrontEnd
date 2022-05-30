@@ -14,13 +14,18 @@
             integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
             crossorigin="anonymous"></script>
     <style>
-        td {
+        td
+        {
             padding-bottom: 20px;
         }
-        h1{
+
+        h1
+        {
             padding-top: 40px;
         }
-        form{
+
+        form
+        {
             padding-top: 30px;
         }
     </style>
@@ -33,22 +38,26 @@
     <table align="center">
         <tr>
             <td>아이디[필수]</td>
-            <td><input type="text" name="userid" class="form-control" placeholder="아이디를 입력하세요" pattern="(?=.*[a-z])(?=.*[0-9]).{6,20}"></td>
+            <td><input type="text" name="userid" class="form-control" placeholder="아이디를 입력하세요"
+                       pattern="(?=.*[a-z])(?=.*[0-9]).{6,20}"></td>
         </tr>
         <tr>
             <td>비밀번호[필수]</td>
-            <td><input type="password" name="pwd" class="form-control" placeholder="비밀번호를 입력하세요" pattern="(?=.*[a-z])(?=.*[0-9])(?=.*[!@#$%^&*]).{8,24}"></td>
+            <td><input type="password" name="pwd" class="form-control" placeholder="비밀번호를 입력하세요"
+                       pattern="(?=.*[a-z])(?=.*[0-9])(?=.*[!@#$%^&*]).{8,24}"></td>
         </tr>
         <tr>
             <td>이름</td>
-            <td><input type="text" name="name" class="form-control" placeholder="이름을 입력하세요" pattern="(?=.*[ㄱ-ㅎ,가-힣]).{2,4}"></td>
+            <td><input type="text" name="name" class="form-control" placeholder="이름을 입력하세요"
+                       pattern="(?=.*[ㄱ-ㅎ,가-힣]).{2,4}"></td>
         </tr>
         <tr>
             <td>주소[필수]</td>
             <td>
                 <div style="display:flex">
-                <input type="text" name="addr" class="form-control w-50">
-                <button class="btn btn-secondary">우편번호</button></div>
+                    <input type="text" name="addr" class="form-control w-50">
+                    <button class="btn btn-secondary">우편번호</button>
+                </div>
                 <input type="text" name="addr" class="form-control" placeholder="상세주소를 입력하세요"></td>
         </tr>
         <tr>
@@ -65,7 +74,8 @@
         </tr>
         <tr>
             <td>이메일[필수]</td>
-            <td><input type="email" name="email" class="form-control" placeholder="example@example.com" pattern="[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*.[a-zA-Z]{2,3}"></td>
+            <td><input type="email" name="email" class="form-control" placeholder="example@example.com"
+                       pattern="[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*.[a-zA-Z]{2,3}"></td>
         </tr>
         <tr>
             <td>뉴스 수신[선택]</td>
