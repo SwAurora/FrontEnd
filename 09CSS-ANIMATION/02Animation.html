@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #wrap
+        {
+            height: 550px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #wrap div
+        {
+            position: absolute;
+            width: 400px;
+            height: 40px;
+            border: 3px solid orange;
+            margin-bottom: 10px;
+        }
+
+        @keyframes TEST1
+        {
+            from
+            {
+                margin-left: 100%;
+            }
+            to
+            {
+                margin-left: 0;
+            }
+        }
+
+        @keyframes TEST2
+        {
+            from
+            {
+                margin-top: 100%;
+            }
+            to
+            {
+                margin-top: 10%;
+            }
+        }
+
+        @keyframes TEST3
+        {
+            from
+            {
+                margin-top: 100%;
+                margin-right: 100%;
+            }
+            to
+            {
+                margin-top: 20%;
+                margin-right: 0;
+            }
+        }
+
+        #d1
+        {
+            animation-name: TEST1;
+            animation-duration: 3s;
+        }
+
+        #d2
+        {
+            animation-name: TEST2;
+            animation-duration: 3s;
+            margin-top:10%;
+        }
+
+        #d3
+        {
+            animation-name: TEST3;
+            animation-duration: 3s;
+            margin-top: 20%;
+        }
+    </style>
+</head>
+<body>
+<div id="wrap">
+    <div id="d1">TEST1</div>
+    <div id="d2">TEST2</div>
+    <div id="d3">TEST3</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body
+        {
+            margin: 0;
+        }
+
+        header
+        {
+            height: 50px;
+        }
+
+        nav
+        {
+            height: 80px;
+            background-color: antiquewhite;
+        }
+
+        #siteMenu
+        {
+            margin-top: 5px;
+        }
+
+        #siteMenu span
+        {
+            display: block;
+            width: 35px;
+            height: 5px;
+            background-color: gray;
+            margin: 5px;
+        }
+
+        #siteMenu:hover #top
+        {
+            transform: translate(0px, 10px) rotate(45deg);
+            transition: 1s;
+        }
+
+        #siteMenu:hover #middle
+        {
+            opacity: 0;
+            transition: 1s;
+        }
+
+        #siteMenu:hover #bottom
+        {
+            transform: translate(0px, -10px) rotate(-45deg);
+            transition: 1s;
+        }
+    </style>
+</head>
+<body>
+<div id="wrapper">
+    <header>
+        <div id="siteMenu">
+            <span id="top"></span>
+            <span id="middle"></span>
+            <span id="bottom"></span>
+        </div>
+    </header>
+    <nav>
+
+    </nav>
+</div>
+</body>
+</html>

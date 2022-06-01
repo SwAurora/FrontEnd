@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div
+        {
+            background-color: orange;
+            height: 50px;
+            width: 100px;
+            margin: 10px;
+            position: relative;
+            left: 0;
+            right: 0;
+        }
+
+        @keyframes moving
+        {
+            from
+            {
+                left: 0;
+            }
+            to
+            {
+                left: 1000px;
+            }
+        }
+
+        #d1
+        {
+            /* 처음부터 끝까지 같은 속도 */
+            animation: moving 2s linear;
+        }
+        #d2
+        {
+            /* 기본값, 천천히 -> 빨라짐 -> 천천히 */
+            animation: moving 2s ease;
+        }
+        #d3
+        {
+            /* 천천히 -> 빨라짐 */
+            animation: moving 2s ease-in;
+        }
+        #d4
+        {
+            /* 보통 -> 천천히 */
+            animation: moving 2s ease-out;
+        }
+        #d5
+        {
+            /* 천천히 -> 보통 -> 천천히 */
+            animation: moving 2s ease-in-out;
+        }
+    </style>
+</head>
+<body>
+<div id="d1"></div>
+<div id="d2"></div>
+<div id="d3"></div>
+<div id="d4"></div>
+<div id="d5"></div>
+</body>
+</html>

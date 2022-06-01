@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .tmp
+        {
+            display: block;
+            width: 0;
+            height: 1px;
+        }
+
+        input
+        {
+            outline: none;
+            border: 0;
+            width: 100px;
+        }
+
+        input:focus + span
+        {
+            background: linear-gradient(to left, red, orange, yellow, green, blue, darkblue, purple);
+            width: 100px;
+            transition: 0.5s;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <input type="text">
+    <span class="tmp"></span>
+</div>
+</body>
+</html>

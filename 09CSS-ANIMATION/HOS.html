@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        @keyframes moving1
+        {
+            from
+            {
+                transform: scale(0%) rotate(0deg);
+                left:0;
+            }
+            to
+            {
+                transform: scale(80%) rotate(5000deg);
+                left:0;
+            }
+        }
+
+        .d1
+        {
+            animation-name: moving1;
+            animation-duration: 5s;
+            animation-timing-function: ease-in;
+            animation-fill-mode: forwards;
+            animation-delay: 1s;
+            margin-left: 200px;
+            margin-top: -100px;
+            left:100%;
+        }
+
+        @keyframes moving2
+        {
+            from
+            {
+                transform: scale(0%);
+                left:0;
+            }
+            to
+            {
+                transform: scale(100%);
+                left:0;
+            }
+        }
+
+        img
+        {
+            position: absolute;
+            left:0;
+            top:0;
+        }
+
+        .d2
+        {
+            animation-name: moving2;
+            animation-duration: 0.1s;
+            animation-delay: 6s;
+            animation-fill-mode: forwards;
+            left:100%;
+        }
+    </style>
+</head>
+<body>
+<img src="img/hos.jpg" class="d1">
+<img src="img/hos2.jpg" class="d2">
+</body>
+</html>

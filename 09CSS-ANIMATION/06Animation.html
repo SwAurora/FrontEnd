@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div
+        {
+            width: 100px;
+            height: 100px;
+            background-color: aqua;
+            margin: 50px;
+        }
+
+        @keyframes moving
+        {
+            from
+            {
+                margin-left: 0;
+            }
+            to
+            {
+                margin-left: 50%;
+            }
+        }
+
+        #d1
+        {
+            animation: moving 2s infinite alternate ease-in-out 3s;
+        }
+
+        #d2
+        {
+            animation: moving 2s infinite alternate ease-in-out 2s;
+        }
+    </style>
+</head>
+<body>
+<div id="d1"></div>
+<div id="d2"></div>
+</body>
+</html>
