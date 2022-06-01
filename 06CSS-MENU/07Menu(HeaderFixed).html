@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *
+        {
+            font-family: "Noto Sans KR", sans-serif;
+            font-weight: 700;
+            text-align: center;
+        }
+
+        body
+        {
+            margin: 0;
+            width: 100%;
+            background-color: beige;
+            height: 4000px;
+        }
+
+        a
+        {
+            text-decoration: none;
+            color: black;
+        }
+
+        ul
+        {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            width: 100%;
+
+        }
+
+        #wrapper
+        {
+        }
+
+        #topMenu
+        {
+            width: 1920px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100px;
+            line-height: 100px;
+            border-top: 1px solid lightgray;
+            border-bottom: 1px solid lightgray;
+            position: relative;
+            left: 0;
+            top: 0;
+            text-align: center;
+            margin: 0;
+        }
+
+        #logo
+        {
+            padding-top: 15px;
+        }
+
+        .menu1
+        {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            position: relative;
+            left: 0;
+            top: 0;
+            background-color: white;
+        }
+
+        .menu1 > li
+        {
+            margin: 0 50px;
+        }
+
+        .menu1 > li:hover
+        {
+            border-bottom: 3px solid rgb(30, 30, 189);
+            height: 105px;
+        }
+
+        .menu2
+        {
+            display: none;
+        }
+
+        .menu1 > li:hover .menu2
+        {
+            display: flex;
+            align-items: center;
+            position: absolute;
+            left: 0;
+            top: 100px;
+            width: 100%;
+            height: 100px;
+            border-top: 0;
+            box-shadow: 0 5px 5px -5px gray;
+            background-color: white;
+        }
+
+        .menu1 > li:hover .menu2 > ul
+        {
+            display: flex;
+            flex-grow: 1;
+            justify-content: space-around;
+            text-align: center;
+            padding-right: 10%;
+        }
+
+        .menu2 p
+        {
+            width: 500px;
+            text-align: right;
+            font-size: 24px;
+            font-weight: 700;
+            margin-right: 10px;
+            background-color: white;
+        }
+
+        #topMenu
+        {
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100%;
+        }
+
+        body
+        {
+            position: relative;
+            top: 100px;
+            left: 0;
+        }
+    </style>
+</head>
+<body>
+<div id="wrapper">
+
+
+    <div id="topMenu">
+
+
+        <!-- NAV 메뉴 시작 -->
+        <ul class="menu1">
+
+            <!-- item1 -->
+
+            <!-- 로고 -->
+            <li id="logo" style="all:unset;padding-top:15px;">
+                <img src="http://www.koreaitjob.co.kr/renewal2021/img/common/logo_header.png" alt=""></li>
+            <li>
+                <a href=#>아카데미 소개</a>
+                <div class="menu2">
+                    <p>SubTitle</p>
+                    <ul>
+                        <li>Submenu11</li>
+                        <li>Submenu22</li>
+                        <li>Submenu33</li>
+                        <li>Submenu44</li>
+                        <li>Submenu55</li>
+                        <li>Submenu66</li>
+                        <li>Submenu11</li>
+                    </ul>
+                </div>
+            </li>
+            <!-- item2 -->
+            <li>
+                <a href=#>IT교육과정</a>
+                <div class="menu2">
+                    <p>SubTitle</p>
+                    <ul>
+                        <li>Submenu1</li>
+                        <li>Submenu2</li>
+                        <li>Submenu3</li>
+                        <li>Submenu4</li>
+                        <li>Submenu5</li>
+                        <li>Submenu6</li>
+                    </ul>
+                </div>
+            </li>
+            <!-- item3 -->
+            <li>
+                <a href=#>국비지원과정</a>
+                <div class="menu2">
+                    <p>SubTitle</p>
+                    <ul>
+                        <li>Submenu1</li>
+                        <li>Submenu2</li>
+                        <li>Submenu3</li>
+                        <li>Submenu4</li>
+                        <li>Submenu5</li>
+                        <li>Submenu6</li>
+                    </ul>
+                </div>
+            </li>
+            <!-- item4 -->
+            <li>
+                <a href=#>커뮤니티</a>
+                <div class="menu2">
+                    <p>SubTitle</p>
+                    <ul>
+                        <li>Submenu1</li>
+                        <li>Submenu2</li>
+                        <li>Submenu3</li>
+                        <li>Submenu4</li>
+                        <li>Submenu5</li>
+                        <li>Submenu6</li>
+                    </ul>
+                </div>
+            </li>
+            <!-- item5 -->
+            <li>
+                <a href=#>프로젝트</a>
+                <div class="menu2">
+                    <p>SubTitle</p>
+                    <ul>
+                        <li>Submenu1</li>
+                        <li>Submenu2</li>
+                        <li>Submenu3</li>
+                        <li>Submenu4</li>
+                        <li>Submenu5</li>
+                        <li>Submenu6</li>
+                    </ul>
+                </div>
+            </li>
+            <!-- item6 -->
+            <li>
+                <a href=#>취업지원센터</a>
+                <div class="menu2">
+                    <p>SubTitle</p>
+                    <ul>
+                        <li>Submenu1</li>
+                        <li>Submenu2</li>
+                        <li>Submenu3</li>
+                        <li>Submenu4</li>
+                        <li>Submenu5</li>
+                        <li>Submenu6</li>
+                    </ul>
+                </div>
+            </li>
+            <!-- item7 -->
+            <li>
+                <a href=#>고객상담센터</a>
+                <div class="menu2">
+                    <p>SubTitle</p>
+                    <ul>
+                        <li>Submenu1</li>
+                        <li>Submenu2</li>
+                        <li>Submenu3</li>
+                        <li>Submenu4</li>
+                        <li>Submenu5</li>
+                        <li>Submenu6</li>
+                    </ul>
+                </div>
+            </li>
+
+        </ul>
+        <!-- topMenu 메뉴 끝 -->
+    </div>
+    <div id="banner" style="background-color: blue; height:500px">
+
+    </div>
+    <div id="tab" style="background-color: green; height:500px">
+
+    </div>
+    <!--Wrapper 끝-->
+</div>
+
+</body>
+</html>
