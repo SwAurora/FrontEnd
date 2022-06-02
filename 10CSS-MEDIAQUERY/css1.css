@@ -1,0 +1,7 @@
+/* 기본 데스크탑 */
+div
+{
+    border: 1px solid gray;
+    height: 50px;
+    background-color: aquamarine;
+}

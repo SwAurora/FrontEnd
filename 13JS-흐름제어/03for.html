@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        ul
+        {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        li
+        {
+            width:150px;
+            height:40px;
+            background-color: aquamarine;
+            margin: 5px;
+        }
+    </style>
+    <script>
+        let num = prompt("입력");
+        document.write("<ul>");
+        for(let i = 0; i < num; i++)
+        {
+            document.write('<li>MENU' + (i + 1) + "</li>");
+        }
+        document.write("</ul>");
+    </script>
+</head>
+<body>
+
+</body>
+</html>

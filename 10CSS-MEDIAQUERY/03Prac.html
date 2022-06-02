@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        nav
+        {
+            border: 1px solid gray;
+            height: 100px;
+            display: flex;
+            line-height: 100px;
+            text-align: center;
+
+        }
+
+        #logo
+        {
+            width: 120px;
+            border: 1px solid gray;
+            background-color: aquamarine;
+        }
+
+        #menu
+        {
+            width: 100%;
+            border: 1px solid gray;
+            background-color: green;
+        }
+
+        #quick
+        {
+            width: 10%;
+            border: 1px solid gray;
+            background-color: beige;
+        }
+
+        /* 햄버거 시작 */
+        #chk
+        {
+            display: none;
+        }
+
+        #SiteMenu span
+        {
+            display: block;
+            width: 35px;
+            height: 5px;
+            background-color: black;
+            margin: 5px;
+            transition: 0.5s;
+        }
+
+        input[id="chk"]:checked + label #top
+        {
+            transform: translate(0px, 10px) rotate(45deg);
+            transition: 0.5s;
+        }
+
+        input[id="chk"]:checked + label #bottom
+        {
+            transform: translate(0px, -10px) rotate(-45deg);
+            transition: 0.5s;
+        }
+
+        input[id="chk"]:checked + label #middle
+        {
+            /* transform:translate(-100px,0px); */
+            opacity: 0;
+            transition: 0.5s;
+        }
+
+        /* 햄버거 끝 */
+
+        #SiteMenu
+        {
+            display: none;
+
+        }
+
+        @media screen and (max-width: 1024px)
+        {
+            #quick
+            {
+                display: none;
+            }
+        }
+
+        @media screen and (max-width: 768px)
+        {
+            #menu
+            {
+                display: none;
+            }
+
+            #logo
+            {
+                width: 150px;
+            }
+
+            #SiteMenu
+            {
+                display: block;
+
+                width: 18%;
+                margin-left: 50%;
+                margin-top: 17px;
+
+            }
+        }
+
+        /* 태블릿일때(1024이하) quick 사라지게 */
+        /* 모바일일때(768이하) quick,menu 사라지고 햄버거 메뉴가 오른쪽에 배치되게하세요 */
+    </style>
+</head>
+<body>
+<nav>
+    <div id="logo">LOGO</div>
+    <div id="menu">MENU</div>
+    <div id="quick">QUICK</div>
+    <input type="checkbox" id="chk">
+    <label for="chk" id="SiteMenu">
+        <span id="top"></span>
+        <span id="middle"></span>
+        <span id="bottom"></span>
+    </label>
+</nav>
+</body>
+</html>
+
+
+ 
+
+

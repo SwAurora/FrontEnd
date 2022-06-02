@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body
+        {
+            height: 2000px;
+        }
+
+        ul
+        {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .depth1 > li
+        {
+            width: 200px;
+            height: 50px;
+            background-color: aquamarine;
+            text-align: center;
+            line-height: 50px;
+        }
+
+        .depth2 > li
+        {
+            width: 200px;
+            height: 30px;
+            line-height: 30px;
+            background-color: orange;
+            text-align: center;
+            margin: 2px;
+            position: relative;
+            left: 0;
+            top: 0;
+        }
+
+        .depth2
+        {
+            display: none;
+        }
+
+        .depth1 > li:hover .depth2
+        {
+            display: block;
+        }
+    </style>
+    <script>
+        let lv1 = prompt("1depth : ");
+        let lv2 = prompt("2depth : ")
+        document.write("<ul class='depth1'>");
+        for(let i = 0; i < lv1; i++)
+        {
+            document.write('<li>MENU' + (i + 1));
+            document.write('<ul class="depth2">');
+            for(let j = 0; j < lv2; j++)
+            {
+                document.write('<li>SUBMENU' + (j + 1) + '</li>');
+            }
+            document.write('</ul>');
+            document.write("</li>");
+        }
+        document.write("</ul>");
+
+        let result = (32 * lv2 + 50) + "px";
+        let l1 = document.querySelectorAll('.depth1 > li');
+        for(const l1Key in l1)
+        {
+
+            l1[l1Key].addEventListener('mouseover', () =>
+            {
+                l1[l1Key].style.height = result;
+                console.log(result);
+
+            });
+            l1[l1Key].addEventListener('mouseout', () =>
+            {
+                l1[l1Key].style.height = "50px";
+            });
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

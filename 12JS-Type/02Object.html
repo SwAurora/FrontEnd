@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        let dog1 = {
+            name: '해피', age: 3, kind: '포메라니안', ShowInfo: function()
+            {
+                alert('이름: ' + this.name + '\n나이 : ' + this.age + '\n견종 : ' + this.kind);
+            }
+        };
+        // document.write(typeof dog1 + "<br>");
+        // document.write("이름 : " + dog1.name + "<br>");
+        // document.write("나이 : " + dog1.age + "<br>");
+        // document.write("종류 : " + dog1.kind + "<br>");
+
+        let car1 = {
+            owner: '홍길동', speed: 10, fuel: 100, ShowInfo: function()
+            {
+                alert('차주 : ' + this.owner + '\n속도 : ' + this.speed + '\n연료 : ' + this.fuel);
+            }
+        };
+        // document.write(car1.owner + " " + car1.speed + " " + car1.fuel + '<br>');
+
+        let customer1 = {
+            name: '홍길동', age: 30, phone: '010-222-3333', addr: '대구', ShowInfo: function()
+            {
+                alert('이름: ' + this.name + '\n나이 : ' + this.age + '\n전화번호 : ' + this.phone + '\n주소 : ' + this.addr);
+            }
+        };
+        // document.write(customer1.name + " " + customer1.age + " " + customer1.phone + " " + customer1.addr + '<br>');
+    </script>
+</head>
+<body>
+<button onclick="dog1.ShowInfo()">dog1</button>
+<button onclick="car1.ShowInfo()">car1</button>
+<button onclick="customer1.ShowInfo()">customer1</button>
+</body>
+</html>
