@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div
+        {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        table
+        {
+            background-color: orange;
+            text-align: center;
+            border-collapse: collapse;
+            margin: 10px;
+        }
+
+        caption
+        {
+            background-color: beige;
+        }
+
+        td
+        {
+            width: 30px;
+            height: 30px;
+            border: 1px solid white;
+        }
+    </style>
+    <script>
+        function GooGooDan()
+        {
+            let dan = document.getElementById('dan').value;
+            let output = document.getElementById('output');
+            let code = '';
+            for(let i = dan; i <= 9; i++)
+            {
+                code += '<table>';
+                code += '<caption>' + i + "단 </caption>";
+                for(let j = 1; j <= 9; j++)
+                {
+                    code += '<tr>';
+                    code += '<td>' + i + '</td>';
+                    code += '<td>X</td>';
+                    code += '<td>' + j + '</td>';
+                    code += '<td>=</td>';
+                    code += '<td>' + i * j + '</td>';
+                    code += '</tr>';
+                }
+                code += '</table>';
+            }
+            output.innerHTML = code;
+        }
+    </script>
+</head>
+<body>
+<input type="text" id="dan">
+<button onclick="GooGooDan()">출력</button>
+<hr>
+<div id="output"></div>
+</body>
+</html>

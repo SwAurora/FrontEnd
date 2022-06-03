@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #d1
+        {
+            width: 50px;
+            height: 50px;
+            background-color: gray;
+        }
+    </style>
+    <script>
+        let xpos = 0;
+        let ypos = 0;
+        let deg = 0;
+        let colorCode;
+        let stack = 0;
+
+        function delay(n)
+        {
+            return new Promise(function(resolve)
+            {
+                setTimeout(resolve, n * 1000);
+            });
+        }
+
+        async function func1()
+        {
+            // d1 태그의 백그라운드 색 orange
+            let d1tg = document.getElementById('d1');
+            while(true)
+            {
+                colorCode = "#" + Math.round(Math.random() * 0xffffff).toString(16);
+                d1tg.style.backgroundColor = colorCode;
+                await delay(1);
+                if(stack !== 0)
+                {
+                    stack = 0;
+                    break;
+                }
+            }
+        }
+
+        function func2()
+        {
+            stack++;
+        }
+
+        function func3()
+        {
+            let d1tg = document.getElementById('d1');
+            if(ypos + 100 <= 600)
+            {
+                d1tg.style.transform = 'translate(' + (xpos += 100) + 'px, ' + (ypos += 100) + 'px) rotate(' + (deg += 180) + 'deg)';
+                d1tg.style.transition = '1s';
+            }
+        }
+
+        function func4()
+        {
+            let d1tg = document.getElementById('d1');
+            if(ypos - 100 >= 0)
+            {
+                d1tg.style.transform = 'translate(' + (xpos -= 100) + 'px, ' + (ypos -= 100) + 'px) rotate(' + (deg -= 180) + 'deg)';
+                d1tg.style.transition = '1s';
+            }
+        }
+
+        function func5()
+        {
+            let d1tg = document.getElementById('d1');
+            d1tg.style.transform = 'translate(0px,0px)';
+            xpos = 0;
+            ypos = 0;
+            deg = 0;
+        }
+    </script>
+</head>
+<body>
+<button onclick="func1()">BG:RandomColor</button>
+<button onclick="func2()">BG:Stop</button>
+<button onclick="func3()">Moving</button>
+<button onclick="func4()">Back</button>
+<button onclick="func5()">Init</button>
+<hr>
+<div id="d1"></div>
+</body>
+</html>
