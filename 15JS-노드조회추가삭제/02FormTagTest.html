@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        ul
+        {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        #cat-outer
+        {
+            font-family: "Open Sans", sans-serif;
+            width: 100%;
+            border: 1px solid gray;
+            display: flex;
+            justify-content: center;
+        }
+
+        #cat-outer > div
+        {
+            width: 300px;
+            border: 1px solid gray;
+            margin: 5px;
+            padding: 10px;
+            text-align: center;
+        }
+
+        img
+        {
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+<div id="cat-outer" class="winder">
+    <div>
+        <form>
+            <ul>
+                <li><img src="gram.jpg" alt=""></li>
+                <li>LG GRAM 2020</li>
+                <li>1,500,000</li>
+                <li>
+                    <button onclick="ShowItemInfo(0)">CART</button>
+                    <button>BuyNow</button>
+                </li>
+            </ul>
+        </form>
+    </div>
+    <div>
+        <form>
+            <ul>
+                <li><img src="gram.jpg" alt=""></li>
+                <li>LG GRAM 2021</li>
+                <li>1,800,000</li>
+                <li>
+                    <button onclick="ShowItemInfo(1)">CART</button>
+                    <button>BuyNow</button>
+                </li>
+            </ul>
+        </form>
+    </div>
+    <div>
+        <form>
+            <ul>
+                <li><img src="gram.jpg" alt=""></li>
+                <li>LG GRAM 2022</li>
+                <li>2,000,000</li>
+                <li>
+                    <button onclick="ShowItemInfo(2)">CART</button>
+                    <button>BuyNow</button>
+                </li>
+            </ul>
+        </form>
+    </div>
+</div>
+<script>
+    formlist = document.forms;
+
+    function ShowItemInfo(idx)
+    {
+        let purchase = confirm('상품명 : ' + formlist[idx].children[0].children[1].innerHTML + '\n' + '상품가격 : ' + formlist[idx].children[0].children[2].innerHTML + '\n장바구니에 담으시겠습니까?');
+        if(purchase === true)
+        {
+            alert("상품을 장바구니에 담았습니다");
+        }
+    }
+</script>
+</body>
+</html>

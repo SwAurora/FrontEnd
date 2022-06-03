@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #ball
+        {
+            width: 100px;
+            height: 100px;
+            border: 3px solid black;
+            border-radius: 50%;
+            position: relative;
+            left: 0;
+            top: 0;
+        }
+
+        @keyframes moving
+        {
+            0%
+            {
+                left: 0;
+                top: 0;
+                border-color: red;
+                animation-timing-function: ease-in;
+            }
+            25%
+            {
+                left: 0;
+                top: 500px;
+                border-color: blue;
+                animation-timing-function: ease-out;
+            }
+            50%
+            {
+                left: 0;
+                top: 150px;
+                border-color: orange;
+                animation-timing-function: ease-in;
+            }
+            75%
+            {
+                left: 0;
+                top: 500px;
+                border-color: green;
+                animation-timing-function: ease-out;
+            }
+            100%
+            {
+                left: 0;
+                top: 0;
+                border-color: yellow;
+                animation-timing-function: ease-in;
+            }
+        }
+    </style>
+    <script>
+        let ball;
+
+        function start()
+        {
+            ball = document.getElementById('ball');
+            ball.style.animationPlayState = 'running';
+            ball.style.animationName = 'moving';
+            ball.style.animationDuration = '3s';
+            ball.style.animationDirection = 'alternate';
+            ball.style.animationIterationCount = 'infinite';
+        }
+
+        function stop()
+        {
+            ball = document.getElementById('ball');
+            ball.style.animationPlayState = 'paused';
+        }
+    </script>
+</head>
+<body>
+
+<button onclick="start()">START</button>
+<button onclick="stop()">STOP</button>
+<button id="left">LEFT</button>
+<button id="right">RIGHT</button>
+<hr>
+<div id="ball"></div>
+<script>
+    let left = document.querySelector('#left');
+    let right = document.querySelector('#right');
+    let isPressed = false;
+    let xpos = 0;
+
+    left.addEventListener('mouseup', function()
+    {
+        isPressed = false;
+    });
+
+    left.addEventListener('mousedown', function()
+    {
+        isPressed = true;
+        leftMove();
+    });
+
+    right.addEventListener('mouseup', function()
+    {
+        isPressed = false;
+    });
+
+    right.addEventListener('mousedown', function()
+    {
+        isPressed = true;
+        rightMove();
+    });
+
+    function leftMove()
+    {
+        if(isPressed)
+        {
+            ball.style.animationTimingFunction = 'linear';
+            ball.style.transform = 'translate(' + (xpos -= 2) + 'px, 0px)';
+            ball.style.transition = '0.1s';
+
+            setTimeout(function()
+            {
+                leftMove();
+            }, 1);
+        }
+    }
+
+    function rightMove()
+    {
+        if(isPressed)
+        {
+            ball.style.animationTimingFunction = 'linear';
+            ball.style.transform = 'translate(' + (xpos += 2) + 'px, 0px)';
+            ball.style.transition = '0.1s';
+
+            setTimeout(function()
+            {
+                rightMove();
+            }, 1);
+        }
+    }
+</script>
+</body>
+</html>
