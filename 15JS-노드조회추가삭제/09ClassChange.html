@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        ul
+        {
+            list-style: none;
+            padding: 0;
+            width: 150px;
+        }
+
+        li
+        {
+            width: 150px;
+            height: 30px;
+            border: 1px solid gray;
+        }
+
+        .item1
+        {
+            background-color: aquamarine;
+        }
+
+        .item2
+        {
+            background-color: chocolate;
+        }
+
+        .item3
+        {
+            background-color: orange;
+        }
+    </style>
+</head>
+<body>
+<button onclick = 'style1()'>STYLE1</button>
+<button onclick = 'style2()'>STYLE2</button>
+<button onclick = 'style3()'>STYLE3</button>
+<ul class="item1" id="menu">
+    <li>ITEM1</li>
+    <li>ITEM2</li>
+    <li>ITEM3</li>
+    <li>ITEM4</li>
+    <li>ITEM5</li>
+    <li>ITEM6</li>
+    <li>ITEM7</li>
+</ul>
+<script>
+    let menu = document.getElementById('menu');
+    function style1()
+    {
+        // 중복될 수 있는 클래스 삭제
+        menu.classList.remove('item2');
+        menu.classList.remove('item3');
+        // 지정된 클래스 추가
+        menu.classList.add('item1');
+        // menu.className = 'item1';
+    }
+    function style2()
+    {
+        // 중복될 수 있는 클래스 삭제
+        menu.classList.remove('item1');
+        menu.classList.remove('item3');
+        // 지정된 클래스 추가
+        menu.classList.add('item2');
+    }
+    function style3()
+    {
+        // 중복될 수 있는 클래스 삭제
+        menu.classList.remove('item1');
+        menu.classList.remove('item2');
+        // 지정된 클래스 추가
+        menu.classList.add('item3');
+    }
+</script>
+</body>
+</html>

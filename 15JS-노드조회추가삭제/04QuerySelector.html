@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        ul
+        {
+            list-style: none;
+            padding-left: 0;
+            border: 1px solid gray;
+            width: 200px;
+        }
+
+        #depth1 > li:hover #depth2
+        {
+            display: block;
+        }
+
+        #depth2
+        {
+            display: none;
+        }
+
+        a
+        {
+            display: block;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+<ul id="depth1">
+    <li>
+        <a href="#">Menu</a>
+        <ul id="depth2">
+            <li>SubMenu</li>
+            <li>SubMenu</li>
+            <li>SubMenu</li>
+        </ul>
+    </li>
+</ul>
+<script>
+    let depth1 = document.querySelector('#depth1 > li > a');
+    depth1.style.backgroundColor = 'orange';
+    depth1.style.color = 'white';
+    let depth2 = document.querySelectorAll('#depth2 > li');
+    for(const depth2Element of depth2)
+    {
+        depth2Element.style.color = 'red';
+    }
+</script>
+</body>
+</html>

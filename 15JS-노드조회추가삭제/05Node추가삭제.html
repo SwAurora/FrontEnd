@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<!--노드생성 + 추가하기-->
+<button onclick = 'addElement()'>노드추가</button>
+<hr>
+<div id="tmp">
+
+</div>
+<script>
+    let i = 1;
+    function addElement()
+    {
+        //부모 노드 찾기
+        let tmp = document.getElementById('tmp');
+        //새 노드 생성
+        let newTg = document.createElement('p');
+        newTg.innerHTML = '<h2>P태그 추가됨!' + (i++) + '</h2>';
+        //연결하기(마지막에 연결)
+        // tmp.appendChild(newTg);
+        //연결하기(처음에 연결)
+        tmp.prepend(newTg);
+    }
+</script>
+</body>
+</html>

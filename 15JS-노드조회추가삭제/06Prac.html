@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<input type="text" id="txt"><button onclick = 'func1()'>추가</button>
+<hr>
+<ul id="travel"></ul>
+<script>
+    function func1()
+    {
+        //텍스트박스에 가고 싶은 여행지를 입력하고 버튼을 누르면
+        //travel 에 li 태그가 추가될 수 있도록 합니다
+        let travel = document.getElementById('travel');
+        let input = document.getElementById('txt');
+        let li = document.createElement('li');
+        li.innerHTML= input.value;
+        travel.appendChild(li);
+    }
+</script>
+</body>
+</html>
