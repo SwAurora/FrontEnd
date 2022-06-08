@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div
+        {
+            border: 1px solid gray;
+            position: relative;
+        }
+
+        #container1
+        {
+            width: 95%;
+            height: 1000px;
+            margin: 1000px auto;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        #container2
+        {
+            width: 95%;
+            height: 1000px;
+            margin: 0px auto;
+            flex-wrap: wrap;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        #container3
+        {
+            width: 95%;
+            height: 1000px;
+            margin: 0px auto;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .item
+        {
+            width: 200px;
+            height: 200px;
+            visibility: hidden;
+        }
+
+        @keyframes moving
+        {
+            from
+            {
+                top: 50%;
+                visibility: visible;
+            }
+            to
+            {
+                top: 0%;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+<div id="container1">
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+</div>
+<div id="container2">
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+</div>
+<div id="container3">
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+</div>
+
+<script>
+
+    //애니메이션 확인
+
+    // itemlist = document.querySelectorAll('#container1 .item');
+    // // alert(itemlist.length);
+    // for(i=0;i<itemlist.length;i++){
+    //     itemlist[i].style.animationName='moving';
+    //     itemlist[i].style.animationDuration=((i+1)*0.2+1) +'s';
+    // }
+
+    document.addEventListener('scroll', function()
+    {
+        let h = document.documentElement.scrollTop;
+        console.log(h);
+        if(h >= 600 && h <= 700)
+        {
+            itemlist = document.querySelectorAll('#container1 .item');
+            for(i = 0; i < itemlist.length; i++)
+            {
+                itemlist[i].style.animationName = 'moving';
+                itemlist[i].style.animationDuration = ((i + 1) * 0.2 + 1) + 's';
+                itemlist[i].style.visibility = 'visible';
+            }
+        }
+
+    })
+
+</script>
+</body>
+</html>

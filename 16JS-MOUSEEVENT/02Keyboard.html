@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+KEYUP: <input type="text" id="t1"><br>
+<p id="p1"></p>
+<hr>
+KEYDOWN: <input type="text" id="t2"><br>
+<p id="p2"></p>
+<hr>
+KEYPRESS: <input type="text" id="t3"><br>
+<p id="p3"></p>
+<hr>
+<script>
+    t1=document.getElementById('t1');
+    t2=document.getElementById('t2');
+    t3=document.getElementById('t3');
+    p1=document.getElementById('p1');
+    p2=document.getElementById('p2');
+    p3=document.getElementById('p3');
+    //keyup
+    t1.addEventListener('keyup', function()
+    {
+        console.log(event.keyCode);
+        p1.innerHTML = event.keyCode;
+    });
+    t2.addEventListener('keydown', function()
+    {
+        console.log(event.keyCode);
+        p2.innerHTML = event.keyCode;
+    });
+    t3.addEventListener('keypress', function()
+    {
+        console.log(event.keyCode);
+        p3.innerHTML = event.keyCode;
+    });
+</script>
+</body>
+</html>
