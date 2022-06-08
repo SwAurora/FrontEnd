@@ -136,6 +136,11 @@
             font-size: 3rem;
             box-shadow: 4px 4px 4px gray;
         }
+
+        #A1
+        {
+            background-color: orange;
+        }
     </style>
 </head>
 <body>
@@ -144,10 +149,10 @@
     <nav>
         <ul>
             <li>
-                <a href="javascript:ShowDoItList()">Do It</a>
+                <a href="javascript:ShowDoItList()" id="A1">Do It</a>
             </li>
             <li>
-                <a href="javascript:ShowDoneList()">Done</a>
+                <a href="javascript:ShowDoneList()" id="A2">Done</a>
             </li>
         </ul>
     </nav>
@@ -167,17 +172,23 @@
     let done = document.getElementsByClassName('done');
     let doItList = document.getElementById('doItList');
     let doneList = document.getElementById('doneList');
+    let A1 = document.getElementById('A1');
+    let A2 = document.getElementById('A2');
 
     function ShowDoItList()
     {
         doIt[0].style.display = 'block';
         done[0].style.display = 'none';
+        A1.style.backgroundColor='orange';
+        A2.style.backgroundColor='#C0AEE7'
     }
 
     function ShowDoneList()
     {
         doIt[0].style.display = 'none';
         done[0].style.display = 'block';
+        A1.style.backgroundColor='#C0AEE7'
+        A2.style.backgroundColor='orange';
     }
 
     //리스트에 할 일 추가
