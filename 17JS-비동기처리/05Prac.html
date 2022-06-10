@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *
+        {
+            font-family: "Noto Sans KR", sans-serif;
+        }
+
+        #clock
+        {
+            font-size: 4rem;
+            font-weight: 800;
+        }
+    </style>
+</head>
+<body>
+<script>
+    const date = new Date();
+    document.write("연도: " + date.getFullYear() + "<br>");
+    document.write("월: " + (date.getMonth()+1) + "<br>");//month 는 0부터 시작 +1 해줘야 함
+    document.write("일: " + date.getDate() + "<br>");
+    document.write("시간: " + date.getHours() + "<br>");
+    document.write("분: " + date.getMinutes() + "<br>");
+    document.write("초: " + date.getSeconds() + "<br>");
+</script>
+<hr>
+<div id="clock"></div>
+<script>
+    setInterval(function()
+    {
+        let clock = document.getElementById('clock');
+        let curDate = new Date();
+        let hour = curDate.getHours();
+        let minute = String(curDate.getMinutes()).padStart(2, "0");
+        let second = String(curDate.getSeconds()).padStart(2, "0");
+        if(hour > 12)
+        {
+            hour = "오후 " + String(hour - 12).padStart(2, "0");
+        }
+        else
+        {
+            hour = "오전 " + String(hour - 12).padStart(2, "0");
+        }
+        clock.innerHTML = hour + ":" + minute + ":" + second;
+    }, 1000);
+</script>
+</body>
+</html>

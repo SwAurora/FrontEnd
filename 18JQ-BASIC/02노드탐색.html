@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+</head>
+<body>
+<ul class="depth1">
+    <li>
+        <a href="#">MENU1</a>
+        <ul class="depth2">
+            <li><a href="#">SubMenu1</a></li>
+            <li><a href="#">SubMenu2</a></li>
+            <li><a href="#">SubMenu3</a></li>
+        </ul>
+    </li>
+    <li>
+        <a href="#">MENU2</a>
+        <ul class="depth2">
+            <li><a href="#">SubMenu1</a></li>
+            <li><a href="#">SubMenu2</a></li>
+            <li><a href="#">SubMenu3</a></li>
+        </ul>
+    </li>
+    <li>
+        <a href="#">MENU3</a>
+        <ul class="depth2">
+            <li><a href="#">SubMenu1</a></li>
+            <li><a href="#">SubMenu2</a></li>
+            <li><a href="#">SubMenu3</a></li>
+        </ul>
+    </li>
+</ul>
+<script>
+    $('.depth1 > li > a')
+        .css('background-color', 'orange')
+        .css('display', 'block')
+        .css('width', '150px')
+        .css('height', '30px');
+
+    $('.depth2 > li')
+        .css('margin-top', '2px')
+        .css('background-color', 'beige')
+        .css('height', '25px');
+
+</script>
+</body>
+</html>

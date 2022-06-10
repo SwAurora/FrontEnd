@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<button onclick="startFunc1()">Func1</button>
+<button>Cancel</button>
+<script>
+    let worker;
+    function func1()
+    {
+        alert("Func1 Sentence");
+    }
+    function func2()
+    {
+        console.log("Func2 Sentence");
+    }
+    function startFunc1()
+    {
+       worker = setTimeout(func1, 3000);
+    }
+    function stopFunc1()
+    {
+        clearTimeout(worker);
+    }
+    // setTimeout(func1, 3000);
+    // setTimeout(func2, 5000);
+    // setTimeout(함수명, 예약시간)
+    // -> 특정함수를 지정된 시간에 한번만 호출
+
+    // clearTimeout(setTimeout 위치값);
+</script>
+</body>
+</html>

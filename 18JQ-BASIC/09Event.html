@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <style>
+        body
+        {
+            height: 4000px;
+        }
+    </style>
+</head>
+<body>
+<input type="text" id="txt">
+<div id="d1"></div>
+<script>
+    // $('#txt').on('keydown', function()
+    // {
+    //     let val = event.keyCode;
+    //     if(val === 13)
+    //     {
+    //         alert($('#txt').val());
+    //     }
+    // });
+
+    // 스크롤 이벤트
+    $(document).on('scroll', function()
+    {
+        console.log(document.documentElement.scrollTop);
+    });
+
+    // 창 사이즈 이벤트
+    $(window).on('resize', function()
+    {
+        console.log(window.innerWidth);
+    });
+</script>
+</body>
+</html>

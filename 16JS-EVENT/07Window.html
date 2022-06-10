@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #ball
+        {
+            width: 500px;
+            height: 500px;
+            border-radius: 50%;
+            background-color: beige;
+            margin: 100px auto;
+        }
+    </style>
+</head>
+<body>
+<div id="ball"></div>
+<script>
+    window.addEventListener('resize', function()
+    {
+        // console.log(window.outerWidth);
+        // console.log('innerwidth : ' + window.innerWidth);
+        if(window.outerWidth <= 700)
+        {
+            ball.style.backgroundColor = 'blue';
+            ball.style.width='150px';
+            ball.style.height='150px';
+            ball.style.transition = '0.5s';
+        }
+        else if(window.outerWidth <= 1200)
+        {
+            ball.style.backgroundColor = 'orange';
+            ball.style.width='200px';
+            ball.style.height='200px';
+            ball.style.transition = '0.5s';
+        }
+        else
+        {
+            ball.style.backgroundColor = 'beige';
+            ball.style.width='300px';
+            ball.style.height='300px';
+            ball.style.transition = '0.5s';
+        }
+    });
+</script>
+</body>
+</html>

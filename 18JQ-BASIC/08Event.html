@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <style>
+        div
+        {
+            width: 200px;
+            height: 200px;
+            border: 1px solid gray;
+        }
+
+        .triangle
+        {
+            width:0;
+            height:0;
+            border-top:0;
+            border-bottom: 200px solid gray;
+            border-left: 100px solid transparent;
+            border-right: 100px solid transparent;
+        }
+
+        .rectangle
+        {
+            border: 1px solid gray;
+            border-radius: 0;
+        }
+
+        .circle
+        {
+            border: 1px solid gray;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+<div id="d1"></div>
+<script>
+    const div1 = $('#d1');
+    div1.click(function()
+    {
+        div1.removeClass('rectangle circle');
+        div1.addClass('triangle');
+    });
+    div1.mouseover(function()
+    {
+        div1.removeClass('triangle rectangle');
+        div1.addClass('circle');
+    });
+    div1.mouseleave(function()
+    {
+        div1.removeClass('triangle circle');
+        div1.addClass('rectangle');
+    });
+</script>
+</body>
+</html>

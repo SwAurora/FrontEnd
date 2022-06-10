@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        p
+        {
+            font-size: 3rem;
+            font-family: 돋움체, sans-serif;
+            font-weight: 800;
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+<input type="text" id="time">
+<hr>
+<p id="timer"></p>
+<script>
+    let time = document.getElementById('time');
+    let worker = 0;
+    time.addEventListener('keydown', function()
+    {
+       if(event.keyCode===13)
+       {
+           if(worker !== 0)
+           {
+               clearInterval(worker);
+           }
+           totalTime=time.value;
+           timer=document.getElementById('timer');
+           curtime =totalTime;
+           timer.innerHTML=curtime
+           worker = setInterval(function()
+           {
+               curtime--;
+               if(curtime<=0)
+               {
+                   clearInterval(worker);
+               }
+               timer.innerHTML=curtime;
+           }, 1000);
+           time.value='';
+       }
+    });
+</script>
+</body>
+</html>

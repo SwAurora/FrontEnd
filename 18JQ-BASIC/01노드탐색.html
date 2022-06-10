@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!--JQ-->
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+</head>
+<body>
+<div id="d1">Hello World</div>
+<div id="d2" class="item">Hello World</div>
+<div id="d3">Hello World</div>
+<div id="d4" class="item">Hello World</div>
+<script>
+    // 자바스크립트
+    document.getElementById('d1').style.backgroundColor = 'orange';
+    // JQ
+    $('#d2').css('background-color', 'red').css('color', 'white');
+    $('#d3').css('color', 'blue');
+    $('#d4').css('width', 400).css('height', 400).css('border', '1px solid gray');
+
+    $('.item').css('font-size', '3rem');
+</script>
+</body>
+</html>

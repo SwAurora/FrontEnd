@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<!--<p id="tmp" style="position:fixed; left:500px; top:500px; font-size:3rem;"></p>-->
+<button onclick="clearInterval(worker)">반복취소</button>
+<script>
+    // setInterval(함수명, 시간)
+    // 시간(1/1000)단위로 함수를 반복 호출
+    worker = setInterval(function()
+    {
+       console.log("Hello world<br>")
+    }, 1000);
+    // document.addEventListener('keydown', function()
+    // {
+    //    document.getElementById('tmp').innerHTML = event.keyCode;
+    // });
+</script>
+</body>
+</html>

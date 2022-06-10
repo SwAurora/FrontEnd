@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+</head>
+<body>
+<script>
+    let obj1 = {'name': 'hong', 'age': '44', 'height': '177.5', 'weight': '77'};
+    // JS
+    // for(let key in obj1)
+    // {
+    //     document.write("key: " + key + "<br>");
+    //     document.write("value : " + obj1[key] + "<br>");
+    // }
+
+    // JQ
+    $.each(obj1, function(key, value)
+    {
+        document.write('K : ' + key + ', V : ' + value + '<br>');
+    });
+
+    document.write('<hr>');
+
+    let obj2 = ['hong', '44', '177.5', '77.7'];
+    // JS
+    // for(let i in obj2)
+    // {
+    //     document.write('K: ' + i + ', V : ' + obj2[i] + '<br>');
+    // }
+
+    // JQ
+    $.each(obj2, function(key, value)
+    {
+        document.write('K: ' + key + ', V : ' + value + '<br>');
+    });
+
+    document.write('<hr>');
+
+    let person = {
+        'name': 'hong', 'age': '30', 'major': '컴퓨터공학', 'certificate': ['정보처리기사', 'CCNA', 'COS-JAVA', '리눅스마스터']
+    };
+
+    $.each(person, function(key)
+    {
+        if(key === 'certificate')
+        {
+            let cert = person[key];
+            $.each(cert, function(k)
+            {
+                document.write('K: ' + key + k + ', V: ' + cert[k] + '<br>');
+            });
+        }
+    });
+
+    document.write('<hr>');
+
+    let emp1 = {
+        'emp_id': '10102020', 'name': '홍길동', 'dept': '인사부', 'title': '대리', 'salary': '4000', 'hobby': ['축구', '농구', '탁구']
+    };
+    $.each(emp1, function(key, value)
+    {
+        // document.write('key : ' + key + ', value : ' + value + '<br>');
+        if(key === 'hobby')
+        {
+            $.each(value, function(k, v)
+            {
+                document.write('key : ' + key + k + ', value : ' + v + '<br>');
+            });
+        }
+    });
+
+    document.write('<hr>');
+
+    let building1 = {
+        'name': '광개토병원',
+        '1floor': ['바르다김밥', 'X-Ray검사실', '주차타워'],
+        '2floor': ['길동치과', '00성형외과'],
+        '9floor': ['코리아 IT', '미한의원'],
+        '10floor': [{'class info': 'A B C'}, {'A class': '리눅스서버', 'B class': 'C언어'}, {'C class': 'JAVA'}]
+    };
+    // building 안의 모든 value 출력
+    $.each(building1, function(key, value)
+    {
+        if(key !== '10floor')
+        {
+            document.write('Key: ' + key + ' Value: ' + value + '<br>');
+        }
+        else
+        {
+            document.write('Key: ' + key + ' Value: ' + value + '<br>');
+            $.each(value, function(ke, ve)
+            {
+                $.each(ve, function(k, v)
+                {
+                    document.write('Key: ' + k + ' Value: ' + v + '<br>');
+                });
+            });
+        }
+    });
+</script>
+</body>
+</html>
