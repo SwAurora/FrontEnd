@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+    <!--common.css-->
+    <link rel="stylesheet" type="text/css" href="css/common.css">
+    <!--topMenu.css-->
+    <link rel="stylesheet" type="text/css" href="css/topMenu.css">
+    <!--mainContainer.css-->
+    <link rel="stylesheet" type="text/css" href="css/mainContainer.css">
+    <!--footer.css-->
+    <link rel="stylesheet" type="text/css" href="css/footer.css">
+    <!--BS CSS-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!--BS JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <style>
+        #top-element
+        {
+        }
+
+        #footer-menu
+        {
+            display: flex;
+        }
+
+        #footer-menu > li
+        {
+            width: 150px;
+        }
+
+        #body-element
+        {
+            margin-top: 50px;
+            display: flex;
+            align-items: center;
+        }
+
+        #footer-logo
+        {
+            width: 100px;
+            height: 100px;
+        }
+
+        #info
+        {
+            width: 70%;
+            height: 50px;
+        }
+
+        #sns
+        {
+            width: 30%;
+            height: 100px;
+        }
+
+        #chk
+        {
+            display: none;
+        }
+
+        #siteMenu
+        {
+            position: relative;
+        }
+
+        #siteMenu span
+        {
+            display: block;
+            width: 35px;
+            height: 5px;
+            background-color: black;
+            margin: 5px;
+            transition: 0.5s;
+            cursor: pointer;
+        }
+
+        input[id="chk"]:checked + label #top
+        {
+            transform: translate(0px, 10px) rotate(45deg);
+            transition: 0.5s;
+        }
+
+        input[id="chk"]:checked + label #bottom
+        {
+            transform: translate(0px, -10px) rotate(-45deg);
+            transition: 0.5s;
+        }
+
+        input[id="chk"]:checked + label #middle
+        {
+            /* transform:translate(-100px,0px); */
+            opacity: 0;
+            transition: 0.5s;
+        }
+
+        #modal
+        {
+            display: none;
+        }
+
+        #loginWin
+        {
+            display: none;
+        }
+
+        @keyframes ShowLogin
+        {
+            from
+            {
+                left: 100%;
+            }
+            to
+            {
+                left: 70%;
+            }
+        }
+
+        @keyframes HideLogin
+        {
+            from
+            {
+                left: 70%;
+            }
+            to
+            {
+                left: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+<div id="wrapper">
+    <div id="topMenu">
+        <header>
+            <!--quick-->
+            <ul id="quick">
+                <li>
+                    <input type="checkbox" id="chk">
+                    <label for="chk" id="siteMenu">
+                        <span id="top"></span>
+                        <span id="middle"></span>
+                        <span id="bottom"></span>
+                    </label>
+                    <div id="bg"></div>
+                    <div id="modal"></div>
+                </li>
+                <li id="loginIcon">
+                    <i class="bi bi-person" style="font-size: 2.5rem;"></i>
+                </li>
+                <li><a href="#">menu3</a></li>
+                <li><a href="#">menu4</a></li>
+            </ul>
+            <div id="loginWin" class="p-3">
+                <div style="text-align: center"><i class="bi bi-person" style="font-size: 5rem;"></i></div>
+                <input placeholder="Insert ID" class="form-control"><br>
+                <input placeholder="Insert PW" class="form-control">
+            </div>
+            <script>
+                $('#loginIcon').on('click', function()
+                {
+                    $('#bg')
+                        .css('display', 'block')
+                        .css('position', 'fixed')
+                        .css('left', '0px')
+                        .css('top', '0px')
+                        .css('width', '100%')
+                        .css('height', '2000px')
+                        .css('background-color', 'gray')
+                        .css('opacity', '0.3')
+                        .css('z-index', zIdx);
+
+                    $('#loginWin').css('display', 'block')
+                        .css('position', 'fixed')
+                        .css('width', '30%')
+                        .css('height', '100%')
+                        .css('left', '70%')
+                        .css('top', '0%')
+                        .css('background-color', 'white')
+                        .css('z-index', zIdx + 1)
+                        .css('animation-name', 'ShowLogin')
+                        .css('animation-duration', '0.6s');
+                })
+
+                $('#bg').on('click', function()
+                {
+                    $('#loginWin')
+                        .css('left', '100%')
+                        .css("animation-name", 'HideLogin')
+                        .css('animation-duration', '0.6s')
+
+                    $(this).css('display', 'none');
+                })
+            </script>
+        </header>
+        <nav>
+            <ul id="depth1">
+                <li id="logo"><a href="#"><img src="">Logo</a></li>
+                <li><a href="#">Menu1</a></li>
+                <li><a href="#">Menu2</a></li>
+                <li><a href="#">Menu3</a></li>
+                <li><a href="#">Menu4</a></li>
+                <li><a href="#">Menu5</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div id="main-container">
+        <!--banner slider-->
+        <div id="banner-slider">banner</div>
+        <!--tab-->
+        <div id="tab">tab</div>
+        <!--card-->
+        <div id="cards">card</div>
+        <!--item slider-->
+        <div id="item-slider">item</div>
+    </div>
+</div>
+<footer>
+    <div id="top-element">
+        <!--링크-->
+        <ul id="footer-menu">
+            <li>이용약관</li>
+            <li>개인정보처리방침</li>
+            <li>고객센터</li>
+        </ul>
+    </div>
+    <div id="body-element">
+        <!--footer-logo-->
+        <div id="footer-logo">LOGO</div>
+        <!--info-->
+        <div id="info">대표 : 김성욱...TEL:010-4006-5092</div>
+        <!--SNS-->
+        <div id="sns">Youtube, ~~</div>
+    </div>
+</footer>
+<script>
+    $("input[id='chk']").on('click', function()
+    {
+        if($(this).is(":checked"))
+        {
+            SiteOn();
+        }
+        else
+        {
+            SiteOff();
+        }
+    });
+
+    // SiteMap 표시하기
+    zIdx = 999;
+
+    function SiteOn()
+    {
+        // BG
+        $('#bg').css('display', 'block')
+            .css('position', 'fixed')
+            .css('left', '0')
+            .css('top', '0')
+            .css('width', '100%')
+            .css('height', '2000px')
+            .css('opacity', '0.5')
+            .css('z-index', zIdx)
+            .css('background-color', 'darkgray');
+
+        // Modal
+        $('#modal').css('display', 'block')
+            .css('position', 'fixed')
+            .css('left', '10%')
+            .css('top', '15%')
+            .css('width', '80%')
+            .css('height', '600px')
+            .css('background-color', 'white')
+            .css('border', '1px solid gray')
+            .css('z-index', zIdx + 1);
+
+        $('#siteMenu').css('z-index', zIdx + 2);
+    }
+
+    // SiteMap 해제하기
+    function SiteOff()
+    {
+        $('#bg').css('display', 'none');
+        $('#modal').css('display', 'none');
+        $('#siteMenu').css('z-index', '1');
+    }
+</script>
+
+</body>
+</html>

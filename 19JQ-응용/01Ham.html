@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <style>
+        #chk
+        {
+            display: none;
+        }
+
+        #siteMenu span
+        {
+            display: block;
+            width: 35px;
+            height: 5px;
+            background-color: black;
+            margin: 5px;
+            transition: 0.5s;
+        }
+
+        input[id="chk"]:checked + label #top
+        {
+            transform: translate(0px, 10px) rotate(45deg);
+            transition: 0.5s;
+        }
+
+        input[id="chk"]:checked + label #bottom
+        {
+            transform: translate(0px, -10px) rotate(-45deg);
+            transition: 0.5s;
+        }
+
+        input[id="chk"]:checked + label #middle
+        {
+            /* transform:translate(-100px,0px); */
+            opacity: 0;
+            transition: 0.5s;
+        }
+    </style>
+</head>
+<body>
+<input type="checkbox" id="chk">
+<label for="chk" id="siteMenu">
+    <span id="top"></span>
+    <span id="middle"></span>
+    <span id="bottom"></span>
+</label>
+<script>
+    $("input[id='chk']").on('click', function()
+    {
+        if($(this).is(":checked"))
+        {
+            alert("체크됨");
+        }
+        else
+        {
+            alert("체크해제됨")
+        }
+    });
+</script>
+</body>
+</html>

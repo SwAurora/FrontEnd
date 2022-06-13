@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- BS ICON -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+
+    <!-- JQ -->
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+
+    <style>
+        #loginIcon
+        {
+            border: 1px solid gray;
+            text-align: right;
+        }
+
+        #loginWin
+        {
+            display: none;
+        }
+
+        @keyframes ShowLogin
+        {
+            from
+            {
+                left: 100%;
+            }
+            to
+            {
+                left: 70%;
+            }
+        }
+
+        @keyframes HideLogin
+        {
+            from
+            {
+                left: 70%;
+            }
+            to
+            {
+                left: 100%;
+            }
+        }
+
+    </style>
+</head>
+<body>
+<div id="loginIcon">
+    <i class="bi bi-person" style="font-size: 2rem;"></i>
+</div>
+<!-- bg -->
+<div id="bg"></div>
+<!-- login -->
+<div id="loginWin">
+    <div><i class="bi bi-person" style="font-size: 3rem;"></i></div>
+    <input placeholder="Insert ID"><br>
+    <input placeholder="Insert PW">
+</div>
+
+
+<script>
+    zIdx = 999;
+    $('#loginIcon').on('click', function()
+    {
+        $('#bg')
+            .css('display', 'block')
+            .css('position', 'fixed')
+            .css('left', '0px')
+            .css('top', '0px')
+            .css('width', '100%')
+            .css('height', '2000px')
+            .css('background-color', 'gray')
+            .css('opacity', '0.3')
+            .css('z-index', zIdx);
+
+        $('#loginWin').css('display', 'block')
+            .css('position', 'fixed')
+            .css('width', '30%')
+            .css('height', '100%')
+            .css('left', '70%')
+            .css('top', '0%')
+            .css('background-color', 'white')
+            .css('z-index', zIdx + 1)
+            .css('animation-name', 'ShowLogin')
+            .css('animation-duration', '0.6s');
+    })
+
+    $('#bg').on('click', function()
+    {
+        $('#loginWin')
+            .css('left', '100%')
+            .css("animation-name", 'HideLogin')
+            .css('animation-duration', '0.6s')
+
+        $(this).css('display', 'none');
+    })
+</script>
+
+</body>
+</html>

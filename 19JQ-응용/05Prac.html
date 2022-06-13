@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #login
+        {
+            width: 500px;
+            height: 500px;
+            background-color: white;
+        }
+
+        #bg
+        {
+            display: none;
+        }
+
+        @keyframes ShowLogin
+        {
+            from
+            {
+                left: -500px;
+            }
+            to
+            {
+                left: 35%;
+            }
+        }
+    </style>
+</head>
+<body>
+<button onclick="ShowLogin()">Login</button>
+<hr>
+<div id="bg"></div>
+<div id="login"></div>
+<script>
+    function ShowLogin()
+    {
+
+    }
+</script>
+</body>
+</html>

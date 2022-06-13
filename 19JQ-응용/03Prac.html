@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <style>
+        #Bg
+        {
+            background-color: gray;
+            display: none;
+        }
+
+        #Modal
+        {
+            border: 1px solid gray;
+            display: none;
+        }
+
+        #Modal > *
+        {
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+<button id="test">ON</button>
+<!--
+    ON을 클릭하면 Bg가 body에 연결
+    modal 창을 원하는 위치에 띄움
+-->
+<div id="Bg"></div>
+<div id="Modal">
+    <h1>SiteMap</h1>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+    </ul>
+</div>
+<script>
+    test = $('#test');
+    Bg = $('#Bg');
+    Modal = $('#Modal');
+    let a = 0;
+    test.click(function()
+    {
+        if(a === 0)
+        {
+            BtnOn();
+            test.html('OFF');
+            a++;
+        }
+        else
+        {
+            BtnOff();
+            test.html('ON');
+            a--;
+        }
+    });
+
+    function BtnOn()
+    {
+        Bg.css('display', 'block')
+            .css('position', 'fixed')
+            .css('left', '0')
+            .css('top', '5%')
+            .css('width', '100%')
+            .css('height', '100%');
+
+        Modal.css('display', 'block')
+            .css('position', 'fixed')
+            .css('left', '10%')
+            .css('top', '10%')
+            .css('width', '80%')
+            .css('height', '85%')
+            .css('background-color', 'white');
+    }
+
+    function BtnOff()
+    {
+        Bg.css('display', 'none');
+        Modal.css('display', 'none');
+    }
+</script>
+</body>
+</html>
