@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <style>
+        ul
+        {
+            list-style: none;
+            padding: 0;
+        }
+
+        #container
+        {
+            width: 500px;
+            height: 500px;
+            border: 1px solid gray;
+            margin: 100px auto;
+            padding: 10px;
+            position: relative;
+        }
+
+        #tabUI > ul
+        {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        #tabUI li
+        {
+            width: 120px;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            border: 1px solid gray;
+        }
+
+        #tabContents
+        {
+            border: 1px solid gray;
+            height: 82%;
+        }
+
+        #tabContents div
+        {
+            display: none;
+        }
+
+        #tabUI .on
+        {
+            background-color: orange;
+        }
+
+        #tabContents .on
+        {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+<div id="wrapper">
+    <div id="container">
+        <div id="tabUI">
+            <ul>
+                <li class="on">Tab1</li>
+                <li>Tab2</li>
+                <li>Tab3</li>
+                <li>Tab4</li>
+            </ul>
+        </div>
+        <div id="tabContents">
+            <div class="on">Tab1 Content</div>
+            <div>Tab2 Content</div>
+            <div>Tab3 Content</div>
+            <div>Tab4 Content</div>
+        </div>
+    </div>
+</div>
+<script>
+    $(document).ready(function()
+    {
+        $('#tabUI > ul li').click(function()
+        {
+            let idx = $(this).index();
+            let li = $('#tabUI > ul li');
+            let div = $('#tabContents > div');
+            li.removeClass('on');
+            li.eq(idx).addClass('on');
+            div.removeClass('on');
+            div.eq(idx).addClass('on');
+        })
+    })
+</script>
+</body>
+</html>

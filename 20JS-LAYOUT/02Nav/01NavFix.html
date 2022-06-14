@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <style>
+        body
+        {
+            margin: 0;
+        }
+
+        #quick
+        {
+            height: 40px;
+            border: 1px solid gray;
+        }
+
+        #nav
+        {
+            height: 80px;
+            border: 1px solid gray;
+        }
+
+        ul
+        {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        #b1
+        {
+            height: 1000px;
+            background-color: aquamarine;
+        }
+
+        #b2
+        {
+            height: 1000px;
+            background-color: bisque;
+        }
+
+        #b3
+        {
+            height: 1000px;
+            background-color: blueviolet;
+        }
+
+        #item1
+        {
+            border: 1px solid gray;
+            background-color: yellow;
+            width: 300px;
+            height: 300px;
+            position: relative;
+            left: 100px;
+            top: 100px;
+        }
+        #item2
+        {
+            border: 1px solid gray;
+            background-color: green;
+            width: 200px;
+            height: 200px;
+            position: relative;
+            left: 800px;
+            top: 0;
+        }
+    </style>
+</head>
+<body>
+<div id="wrapper">
+    <div id="quick">
+        <div id="nav">
+            <ul>
+                <li>MENU1</li>
+                <li>MENU2</li>
+                <li>MENU3</li>
+                <li>MENU4</li>
+            </ul>
+        </div>
+        <div id="b1">
+            <div id="item1"></div>
+            <div id="item2"></div>
+            <div id="item3"></div>
+        </div>
+        <div id="b2">body2</div>
+        <div id="b3">body3</div>
+    </div>
+</div>
+<script>
+    $(document).ready(function()
+    {
+        $(window).scroll(function()
+        {
+            let topVal = $(this).scrollTop();
+            console.log(topVal);
+            if(topVal >= 50)
+            {
+                $('#nav').css('position', 'fixed').css('width', '100%').css('left', '0').css('top', '0');
+            }
+            else
+            {
+                $('#nav').css('position', 'relative').css('width', '100%').css('left', '0').css('top', '0');
+            }
+        })
+    })
+</script>
+</body>
+</html>
