@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .card
+        {
+            width: 250px;
+            height: 250px;
+            position: relative;
+            margin: 30px;
+        }
+
+        .card img
+        {
+            width: 100%;
+            height: 100%;
+            transition: 0.4s;
+            filter: grayscale(100%);
+        }
+
+        .card img:hover
+        {
+            transform: scale(1.1, 1.1);
+            transition: 0.4s;
+            filter: grayscale(0%);
+            cursor: pointer;
+        }
+
+        .iteminfo
+        {
+            width: 200px;
+            position: absolute;
+            left: 20px;
+            top: 130px;
+            background-color: white;
+            box-shadow: 0 0 14.4px 0.6px rgb(34 30 31 / 30%);
+            padding: 5px;
+        }
+
+        .iteminfo span, a
+        {
+            font-size: 0.5rem;
+        }
+
+        .iteminfo p
+        {
+            font-size: 0.7rem;
+        }
+    </style>
+</head>
+<body>
+<div class="card">
+    <img src="img/card1.jpg" alt="#">
+    <div class="iteminfo">
+        <span>Category</span>
+        <h2>상품설명</h2>
+        <p>이 상품에 대한 설명</p>
+        <a href="#">자세히 보기</a>
+    </div>
+</div>
+</body>
+</html>

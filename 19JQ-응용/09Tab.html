@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <style>
+        #container
+        {
+            width: 500px;
+            height: 500px;
+            border: 1px solid gray;
+            position: relative;
+            margin: 100px auto;
+            padding: 10px;
+        }
+
+        #TabUI
+        {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        #TabUI .on
+        {
+            background-color: #AF69EE;
+        }
+
+        #TabUI li
+        {
+            width: 100px;
+            height: 40px;
+            border: 1px solid gray;
+            text-align: center;
+            line-height: 40px;
+            cursor: pointer;
+            user-select: none;
+        }
+
+        #TabContents
+        {
+            border: 1px solid gray;
+            height: 85%;
+        }
+
+        #TabContents div
+        {
+            display: none;
+        }
+
+        #TabContents .on
+        {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+<div id="container">
+    <ul id="TabUI">
+        <li class="on">MENU1</li>
+        <li>MENU2</li>
+        <li>MENU3</li>
+        <li>MENU4</li>
+        <li>MENU5</li>
+    </ul>
+    <div id="TabContents">
+        <div class="on">Content1</div>
+        <div>Content2</div>
+        <div>Content3</div>
+        <div>Content4</div>
+        <div>Content5</div>
+    </div>
+</div>
+<script>
+    $('#TabUI li').click(function()
+    {
+        let idx = $(this).index();
+        let li = $('#TabUI li');
+        let div = $('#TabContents div');
+        li.removeClass('on');
+        li.eq(idx).addClass('on');
+        div.removeClass('on');
+        div.eq(idx).addClass('on');
+    })
+</script>
+</body>
+</html>

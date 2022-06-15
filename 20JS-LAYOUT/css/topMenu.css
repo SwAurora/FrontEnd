@@ -1,3 +1,4 @@
+/* topmenu */
 header
 {
     height: 50px;
@@ -14,6 +15,12 @@ header
 }
 
 /* Nav */
+nav
+{
+    margin-top: 5px;
+    /* height:120px; */
+    background-color: beige;
+}
 
 #depth1
 {
@@ -45,7 +52,10 @@ header
 #sitemenu
 {
     position: relative;
-    margin: 10px 40px 0 10px;
+    /* margin:10px 40px 0px 10px; */
+    margin-left: 5px;
+    margin-right: -5px;
+    margin-top: 10px;
 }
 
 #sitemenu span
@@ -96,10 +106,10 @@ input[id="chk"]:checked + label #middle
 #modal
 {
     width: 80%;
-    height: 800px;
+    height: 850px;
     position: fixed;
     left: 10%;
-    top: 10%;
+    top: 6%;
     background-color: white;
     display: none;
 }
@@ -127,11 +137,13 @@ input[id="chk"]:checked + label #middle
 {
     from
     {
-        left: 70%
+        left: 70%;
+        background-color: white;
     }
     to
     {
         left: 100%;
+        background-color: white;
     }
 }
 

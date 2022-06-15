@@ -24,6 +24,32 @@
             position: relative;
         }
 
+        #prev, #next
+        {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            border: 1px solid gray;
+            line-height: 50px;
+            text-align: center;
+            border-radius: 50%;
+            background-color: white;
+            user-select: none;
+            cursor: pointer;
+        }
+
+        #prev
+        {
+            left: -27px;
+            top: 25px;
+        }
+
+        #next
+        {
+            left: 95%;
+            top: 25px;
+        }
+
         #tabUI > ul
         {
             display: flex;
@@ -37,6 +63,8 @@
             line-height: 50px;
             text-align: center;
             border: 1px solid gray;
+            user-select: none;
+            cursor: pointer;
         }
 
         #tabContents
@@ -64,6 +92,8 @@
 <body>
 <div id="wrapper">
     <div id="container">
+        <div id="prev">&lt;</div>
+        <div id="next">&gt;</div>
         <div id="tabUI">
             <ul>
                 <li class="on">Tab1</li>
@@ -92,6 +122,35 @@
             li.eq(idx).addClass('on');
             div.removeClass('on');
             div.eq(idx).addClass('on');
+        })
+
+        $('#prev').click(function()
+        {
+            let idx = $('.on').index() - 1;
+
+            if(idx >= 0)
+            {
+                let li = $('#tabUI > ul li');
+                let div = $('#tabContents > div');
+                li.removeClass('on');
+                li.eq(idx).addClass('on');
+                div.removeClass('on');
+                div.eq(idx).addClass('on');
+            }
+        })
+        $('#next').click(function()
+        {
+            let idx = $('.on').index() + 1;
+            let end = $('#tabUI> ul li').length -1;
+            if(idx <= end)
+            {
+                let li = $('#tabUI > ul li');
+                let div = $('#tabContents > div');
+                li.removeClass('on');
+                li.eq(idx).addClass('on');
+                div.removeClass('on');
+                div.eq(idx).addClass('on');
+            }
         })
     })
 </script>

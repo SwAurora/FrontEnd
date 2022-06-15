@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!--JQ-->
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <!--Slick-->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <style>
+        ul
+        {
+            list-style: none;
+            padding: 0;
+        }
+
+        img
+        {
+            width: 300px;
+            height: 300px;
+            margin: 0;
+        }
+
+        li
+        {
+            padding: 10px;
+            margin: 0 5px;
+        }
+
+        .slick-center
+        {
+            transform: scale(1.4, 1.4);
+            transition: 0.5s;
+        }
+
+        .tmp
+        {
+            width: 1000px;
+            margin: 150px auto;
+        }
+
+        .slick-arrow
+        {
+            width: 50px;
+            height: 50px;
+            line-height: 50px;
+            font-size: 1.5rem;
+            border: 0;
+            border-radius: 50%;
+            background-color: white;
+            color: gray;
+            box-shadow: 2px 2px 1px lightgray;
+        }
+
+        .slick
+        {
+            position: relative;
+        }
+
+        .slick #prev, .slick #next
+        {
+            position: absolute;
+        }
+
+        .slick #prev
+        {
+            top: 135px;
+            left: -25px;
+            z-index: 500;
+        }
+
+        .slick #next
+        {
+            top: 135px;
+            left: 97.5%;
+        }
+
+        .bn-controller
+        {
+            display: flex;
+            justify-content: center;
+            margin-top: 15px;
+        }
+
+        .bn-controller li
+        {
+            width: 40px;
+            height: 40px;
+        }
+
+        /* .bn-controller button */
+        /* { */
+        /*     width: 100%; */
+        /*     height: 100%; */
+        /*     border: 0; */
+        /*     border-radius: 50%; */
+        /*     background-color: #AF69EE; */
+        /* } */
+
+        .bn-controller .slide-banner
+        {
+            width: 50%;
+            height: 50%;
+            border: 0;
+            border-radius: 50%;
+            background-color: #AF69EE;
+        }
+    </style>
+</head>
+<body>
+<div id="container" class="">
+    <div class="tmp">
+        <ul class="slick">
+            <li class=""><img src="img/card1.jpg" alt="#"></li>
+            <li class=""><img src="img/card2.jpg" alt="#"></li>
+            <li class=""><img src="img/card3.jpg" alt="#"></li>
+            <li class=""><img src="img/card5.jpg" alt="#"></li>
+            <li class=""><img src="img/card1.jpg" alt="#"></li>
+            <li class=""><img src="img/card2.jpg" alt="#"></li>
+            <li class=""><img src="img/card3.jpg" alt="#"></li>
+        </ul>
+    </div>
+</div>
+<script>
+    $('.slick').slick({
+        arrows: true, // prev, next 버튼 표시여부
+        autoplay: true, // 자동넘김 여부
+        speed: 500, // 슬라이드 속도
+        autoplaySpeed: 5000, // 자동넘김 간격
+        pauseOnHover: true, // 마우스 hover 시 슬라이드 멈춤여부
+        vertical: false, //
+        slidesToShow: 5, // 표시되는 슬라이드 갯수
+        slidesToScroll: 1, // 넘겨질 슬라이드 수
+        // centerMode: true,
+        prevArrow: "", nextArrow: "", // prevArrow: "<button id='prev'>&lt;</button>", nextArrow: "<button id='next'>&gt;</button>",
+        // dots: true, // 페이지 네비게이션
+        dotsClass: 'bn-controller', // 페이지 네비게이션 클래스명 지정
+        // 페이징 커스텀
+        customPaging: function(slide, i)
+        {
+            console.log("페이지 번호 확인 : " + i);
+            console.log(slide.$slider[0]);
+            return '<div class="slide-banner"></div>'
+        }, // 반응형 처리
+        responsive: [{
+            breakpoint: 960, settings: {
+                slidesToShow: 3
+            }
+        }, {
+            breakpoint: 768, settings: {
+                slidesToShow: 1
+            }
+        }]
+    })
+</script>
+</body>
+</html>
